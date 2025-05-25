@@ -2,7 +2,7 @@
 
 Ph.D. candidate in Computer Science at the Instituto Tecnológico de Aeronáutica (ITA)  
 Research Scholar at Carnegie Mellon University (CMU)  
-Cyber Defense Researcher at CTI Renato Archer  
+Cyber Threat Intelligence Researcher at CTI Renato Archer  
 Officer in the Brazilian Army
 
 ---
