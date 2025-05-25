@@ -50,6 +50,6 @@ Design and implementation of resilient agent-based cyber defenders with LLM-supp
 
 ## 🔗 Contact
 
-- Email: sidnei@cti.br  
+- Email: sidneibarbieri@gmail.com
 - GitHub: [github.com/sidneibarbieri](https://github.com/sidneibarbieri)  
 - LinkedIn: [linkedin.com/in/sidneibarbieri](https://www.linkedin.com/feed/)
