@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="AutoSUT measures missing environment semantics in structured CTI and materializes declared campaign and SUT pairs for controlled replay.">
+  <title>AutoSUT | Environment Semantics for Adversary Emulation</title>
+  <link rel="stylesheet" href="../assets/research-page.css">
+  <style>:root { --accent: #315f66; --accent-soft: #dce9e8; --decision: #315f66; }</style>
+</head>
+<body>
+  <header><div class="wrap"><a class="wordmark" href="#top">AutoSUT</a><nav aria-label="Primary"><a href="#method">Method</a><a href="#evidence">Evidence</a><a href="#boundary">Boundary</a><a href="../">Sidnei Barbieri</a></nav></div></header>
+  <main id="top">
+    <div class="hero"><div class="wrap">
+      <p class="eyebrow">Environment semantics for controlled replay</p>
+      <h1>Measure what the campaign does not say about its environment.</h1>
+      <p class="lede">AutoSUT attributes the evidence behind a candidate test environment, validates declared campaign and SUT pairs, and materializes controlled Docker or VM plans when the required profile exists.</p>
+      <div class="actions"><a class="primary" href="https://github.com/sidneibarbieri/autosut-artifact-2026">Open artifact</a><a href="https://arxiv.org/abs/2606.08700">Read paper</a><a href="#boundary">Read the claim boundary</a></div>
+    </div></div>
+    <section id="method"><div class="wrap">
+      <p class="section-label">01 / Method</p><h2>Evidence and introduced choices remain separate.</h2>
+      <div class="flow">
+        <div class="stage"><span>01</span><strong>Structured CTI</strong><small>Campaign, technique, software and CVE signals</small></div>
+        <div class="stage"><span>02</span><strong>Environment evidence</strong><small>Platform and compatibility constraints</small></div>
+        <div class="stage proposal"><span>03</span><strong>Candidate profile</strong><small>Declared SUT and introduced commitments</small></div>
+        <div class="stage decision"><span>04</span><strong>Validated pair</strong><small>Materialization and replay contract</small></div>
+      </div>
+    </div></section>
+    <section id="evidence"><div class="wrap">
+      <p class="section-label">02 / Current surface</p><h2>Measurement is broader than execution.</h2>
+      <div class="metrics">
+        <div class="metric"><strong>56</strong><span>enterprise campaigns measured</span></div>
+        <div class="metric"><strong>20</strong><span>implemented replay campaigns</span></div>
+        <div class="metric"><strong>14</strong><span>published campaign and SUT profiles</span></div>
+        <div class="metric"><strong>12</strong><span>pairs with strict validation</span></div>
+      </div>
+    </div></section>
+    <section id="boundary"><div class="wrap split">
+      <div><p class="section-label">03 / Reviewer path</p><h2>Static claims first, live replay second.</h2><p>The fast path recomputes the measurement and traceability outputs without Docker. The isolated replay path then runs every implemented campaign and records per-step evidence, fidelity, cleanup, and failures.</p><div class="actions"><a href="https://github.com/sidneibarbieri/autosut-artifact-2026#fast-reviewer-path">Reviewer quick start</a></div></div>
+      <div class="boundary"><strong>Claim boundary</strong>AutoSUT does not synthesize an arbitrary faithful environment from any STICKS plan. It materializes declared profiles and exposes which elements come from the corpus, deterministic inference, or analyst authorship.</div>
+    </div></section>
+  </main>
+  <footer><div class="wrap">AutoSUT research artifact · evidence before automation claims</div></footer>
+</body>
+</html>

@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="STICKS compiles ATT&amp;CK campaign structure into finite, auditable procedural plans with deterministic admission.">
+  <title>STICKS | Procedural Semantics for Threat Emulation</title>
+  <link rel="stylesheet" href="../assets/research-page.css">
+  <style>:root { --accent: #2b4c6f; --accent-soft: #dfe8f1; }</style>
+</head>
+<body>
+  <header><div class="wrap"><a class="wordmark" href="#top">STICKS</a><nav aria-label="Primary"><a href="#method">Method</a><a href="#evidence">Evidence</a><a href="#boundary">Boundary</a><a href="../">Sidnei Barbieri</a></nav></div></header>
+  <main id="top">
+    <div class="hero"><div class="wrap">
+      <p class="eyebrow">Procedural admission for adversary emulation</p>
+      <h1>Compile threat structure into decisions that can be checked.</h1>
+      <p class="lede">STICKS turns pinned ATT&amp;CK campaign structure into typed procedural plans. A bounded proposer may suggest realizations, but a deterministic verifier decides what enters the executable record.</p>
+      <div class="actions"><a class="primary" href="https://github.com/sidneibarbieri/sticks-artifact">Open artifact</a><a href="https://arxiv.org/abs/2512.12078">Read paper</a><a href="#evidence">Inspect evidence state</a></div>
+    </div></div>
+    <section id="method"><div class="wrap">
+      <p class="section-label">01 / Method</p><h2>Proposal remains outside the trusted core.</h2>
+      <div class="flow">
+        <div class="stage"><span>01</span><strong>Pinned CTI</strong><small>Campaign graph and source hashes</small></div>
+        <div class="stage"><span>02</span><strong>Typed plan</strong><small>Order, state and execution locus</small></div>
+        <div class="stage proposal"><span>03</span><strong>Bounded proposal</strong><small>Finite catalog candidates</small></div>
+        <div class="stage decision"><span>04</span><strong>Deterministic admission</strong><small>Contracts, bindings and evidence</small></div>
+      </div>
+    </div></section>
+    <section id="evidence"><div class="wrap">
+      <p class="section-label">02 / Evidence</p><h2>The denominator stays visible.</h2>
+      <div class="metrics">
+        <div class="metric"><strong>55</strong><span>compiled campaigns</span></div>
+        <div class="metric"><strong>1,146</strong><span>ordered procedural steps</span></div>
+        <div class="metric"><strong>252</strong><span>steps reached by the trusted catalog</span></div>
+        <div class="metric"><strong>919</strong><span>steps reached after admitted Stage 2 drafts</span></div>
+      </div>
+    </div></section>
+    <section id="boundary"><div class="wrap split">
+      <div><p class="section-label">03 / Reviewer path</p><h2>One command recomputes the evidence.</h2><p>The public artifact regenerates records, verifies hashes and claim chains, audits its publication surface, and runs the test suite without an API key.</p><div class="actions"><a href="https://github.com/sidneibarbieri/sticks-artifact#reviewer-quick-start">Reviewer quick start</a></div></div>
+      <div class="boundary"><strong>Claim boundary</strong>Compilation and deterministic admission are measured over the full pinned corpus. The artifact does not claim corpus-wide campaign execution, historical reconstruction, or observational equivalence.</div>
+    </div></section>
+  </main>
+  <footer><div class="wrap">STICKS research artifact · venue-neutral release surface</div></footer>
+</body>
+</html>
