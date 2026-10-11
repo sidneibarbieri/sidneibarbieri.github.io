@@ -150,8 +150,8 @@ p { max-width: var(--measure); }
   background: var(--surface);
 }
 .card p { color: var(--slate); font-size: .93rem; margin: 0 0 .8rem; }
-.card .meta { font-size: .85rem; }
-.card .meta a { margin-right: .8rem; }
+.card .meta { font-size: .85rem; display: flex; flex-wrap: wrap; gap: .45rem .8rem; }
+.card .meta a { white-space: nowrap; }
 
 ol.papers { list-style: none; margin: 0; padding: 0; }
 ol.papers li { padding: .95rem 0; border-bottom: 1px solid var(--rule); }
@@ -219,7 +219,7 @@ footer .wrap { display: flex; justify-content: space-between; gap: 1rem; flex-wr
         <a href="https://github.com/sidneibarbieri">GitHub</a>
         <a href="https://orcid.org/0000-0001-9090-9469">ORCID</a>
         <a href="http://lattes.cnpq.br/5930510403083120">Lattes</a>
-        <a href="https://www.linkedin.com/in/sidneibarbieri">LinkedIn</a>
+        <a href="https://www.linkedin.com/in/sidnei-barbieri-157195137/">LinkedIn</a>
       </div>
     </div>
     <picture>
@@ -275,8 +275,8 @@ footer .wrap { display: flex; justify-content: space-between; gap: 1rem; flex-wr
         plans, evaluated on production SOC incidents. Its artifact release is paused while an
         independent publication-safety review is completed.</p>
         <p class="meta">
-          <a href="https://sidneibarbieri.github.io/socpilot/">Project page</a>
-          <a href="https://arxiv.org/abs/2605.05501">Paper</a>
+          <a href="https://sidneibarbieri.github.io/socpilot/">SOCpilot project</a>
+          <a href="https://arxiv.org/abs/2605.05501">SOCpilot preprint</a>
         </p>
       </div>
       <div class="card">
@@ -286,15 +286,26 @@ footer .wrap { display: flex; justify-content: space-between; gap: 1rem; flex-wr
         <p class="meta"><a href="https://arxiv.org/abs/2605.21694">Paper</a></p>
       </div>
       <div class="card">
-        <h3>STICKS &amp; AutoSUT</h3>
-        <p>Two measurements of what ATT&amp;CK-in-STIX leaves implicit: the procedural steps an
-        emulation must reconstruct, and the environment an emulated campaign needs to exist in.</p>
+        <h3>STICKS</h3>
+        <p>Reconstruction of campaign procedures from structured threat intelligence, using
+        a versioned procedure catalog and deterministic admission under a declared
+        laboratory contract. It records which choices come from the source and which
+        the reconstruction supplies; admission alone is not execution evidence.</p>
         <p class="meta">
-          <a href="https://sidneibarbieri.github.io/sticks/">Project page</a>
-          <a href="https://arxiv.org/abs/2512.12078">STICKS paper</a>
-          <a href="https://sidneibarbieri.github.io/autosut/">AutoSUT project</a>
-          <a href="https://arxiv.org/abs/2606.08700">AutoSUT paper</a>
+          <a href="https://sidneibarbieri.github.io/sticks/">STICKS project</a>
+          <a href="https://arxiv.org/abs/2512.12078">STICKS preprint</a>
           <a href="https://github.com/sidneibarbieri/sticks-artifact">STICKS artifact</a>
+        </p>
+      </div>
+      <div class="card">
+        <h3>AutoSUT</h3>
+        <p>Measurement of the environment requirements that structured threat intelligence
+        supplies, and the deployment choices it leaves open. Its qualification workflow
+        distinguishes a compatible laboratory plan from a deployed environment and an
+        observed execution effect.</p>
+        <p class="meta">
+          <a href="https://sidneibarbieri.github.io/autosut/">AutoSUT project</a>
+          <a href="https://arxiv.org/abs/2606.08700">AutoSUT preprint</a>
           <a href="https://github.com/sidneibarbieri/autosut-artifact-2026">AutoSUT artifact</a>
         </p>
       </div>
@@ -443,7 +454,7 @@ footer .wrap { display: flex; justify-content: space-between; gap: 1rem; flex-wr
       <a href="https://github.com/sidneibarbieri">github.com/sidneibarbieri</a>
       <a href="https://orcid.org/0000-0001-9090-9469">ORCID</a>
       <a href="http://lattes.cnpq.br/5930510403083120">Lattes</a>
-      <a href="https://www.linkedin.com/in/sidneibarbieri">LinkedIn</a>
+      <a href="https://www.linkedin.com/in/sidnei-barbieri-157195137/">LinkedIn</a>
     </div>
   </div>
 </section>
@@ -453,7 +464,7 @@ footer .wrap { display: flex; justify-content: space-between; gap: 1rem; flex-wr
 <footer>
   <div class="wrap">
     <span>Instituto Tecnológico de Aeronáutica, São José dos Campos, Brazil</span>
-    <span>Updated September 2026</span>
+    <span>Updated October 2026</span>
   </div>
 </footer>
 
@@ -472,7 +483,7 @@ footer .wrap { display: flex; justify-content: space-between; gap: 1rem; flex-wr
     "https://github.com/sidneibarbieri",
     "https://orcid.org/0000-0001-9090-9469",
     "http://lattes.cnpq.br/5930510403083120",
-    "https://www.linkedin.com/in/sidneibarbieri"
+    "https://www.linkedin.com/in/sidnei-barbieri-157195137/"
   ]
 }
 </script>

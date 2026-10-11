@@ -21,8 +21,30 @@ body {
   line-height: 1.62;
 }
 a { color: var(--accent); text-underline-offset: 3px; }
+a:focus-visible {
+  border-radius: 3px;
+  outline: 3px solid color-mix(in srgb, var(--accent) 72%, white);
+  outline-offset: 3px;
+}
+.skip-link {
+  background: var(--paper);
+  border: 1px solid var(--line);
+  border-radius: 6px;
+  left: 16px;
+  padding: 8px 12px;
+  position: fixed;
+  top: -64px;
+  z-index: 10;
+}
+.skip-link:focus { top: 12px; }
 .wrap { width: min(1080px, calc(100% - 40px)); margin: 0 auto; }
-header { border-bottom: 1px solid var(--line); }
+header {
+  background: color-mix(in srgb, var(--paper) 94%, transparent);
+  border-bottom: 1px solid var(--line);
+  position: sticky;
+  top: 0;
+  z-index: 5;
+}
 header .wrap { display: flex; align-items: center; justify-content: space-between; min-height: 64px; gap: 20px; }
 .wordmark { color: var(--ink); font-weight: 760; letter-spacing: .03em; text-decoration: none; }
 nav { display: flex; flex-wrap: wrap; gap: 20px; }
@@ -34,7 +56,7 @@ h1 { font-size: clamp(2.6rem, 7vw, 5.8rem); line-height: .98; letter-spacing: -.
 .actions { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 30px; }
 .actions a { border: 1px solid var(--line); border-radius: 999px; color: var(--ink); padding: 8px 16px; text-decoration: none; }
 .actions a.primary { background: var(--accent); border-color: var(--accent); color: white; }
-section { border-top: 1px solid var(--line); padding: 56px 0; }
+section { border-top: 1px solid var(--line); padding: 56px 0; scroll-margin-top: 80px; }
 h2 { font-size: clamp(1.7rem, 4vw, 3rem); letter-spacing: -.025em; line-height: 1.08; margin: 12px 0 26px; }
 .flow { display: grid; grid-template-columns: repeat(4, 1fr); gap: 12px; }
 .stage { background: var(--surface); border-top: 4px solid var(--line); min-height: 150px; padding: 18px; }
@@ -55,4 +77,7 @@ footer { border-top: 1px solid var(--line); color: var(--muted); font-size: .86r
   header .wrap { align-items: flex-start; flex-direction: column; padding: 16px 0; }
   .flow, .metrics, .split { grid-template-columns: 1fr; }
   .stage { min-height: 0; }
+}
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
 }
