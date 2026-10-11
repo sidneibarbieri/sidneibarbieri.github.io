@@ -23,7 +23,7 @@
       <p class="eyebrow">Environment semantics for controlled replay</p>
       <h1>Measure what the campaign does not say about its environment.</h1>
       <p class="lede">AutoSUT attributes the evidence behind a candidate test environment, generates bounded Linux SUT blueprints, and prepares campaign and SUT pairs when their execution contracts and effect adapters are reviewed.</p>
-      <div class="actions"><a class="primary" href="https://github.com/sidneibarbieri/autosut-artifact-2026">Open artifact</a><a href="https://arxiv.org/abs/2606.08700">Read paper</a><a href="#boundary">Read the claim boundary</a></div>
+      <div class="actions"><a class="primary" href="https://github.com/sidneibarbieri/autosut-artifact-2026">Open public snapshot</a><a href="https://arxiv.org/abs/2606.08700">Read preprint</a><a href="#boundary">Read the claim boundary</a></div>
     </div></div>
     <section id="method"><div class="wrap">
       <p class="section-label">01 / Method</p><h2>Evidence and introduced choices remain separate.</h2>
@@ -42,9 +42,10 @@
         <div class="metric"><strong>42</strong><span>partial SUT plans with explicit gaps</span></div>
         <div class="metric"><strong>3</strong><span>reviewed pairs with preserved complete-replay receipts</span></div>
       </div>
+      <p class="release-note">These figures describe the current research candidate. The linked public repository is an August 2026 snapshot and has not yet been updated to reproduce this candidate.</p>
     </div></section>
     <section id="boundary"><div class="wrap split">
-      <div><p class="section-label">03 / Reviewer path</p><h2>Static claims first, live replay second.</h2><p>The fast path recomputes measurement and traceability without Docker. The isolated replay path runs the three reviewed pairs and records each step's effect evidence, fidelity, cleanup, and failures.</p><div class="actions"><a href="https://github.com/sidneibarbieri/autosut-artifact-2026#fast-reviewer-path">Reviewer quick start</a></div></div>
+      <div><p class="section-label">03 / Reviewer path</p><h2>Start with the published snapshot.</h2><p>Its fast path recomputes the snapshot's measurements without Docker. A refreshed package for the current measurements and three reviewed replay receipts remains under validation.</p><div class="actions"><a href="https://github.com/sidneibarbieri/autosut-artifact-2026#fast-reviewer-path">Snapshot quick start</a></div></div>
       <div class="boundary"><strong>Claim boundary</strong>AutoSUT does not synthesize an arbitrary faithful environment from any STICKS plan. New plans may be measured and compiled, but live execution remains blocked until an effect adapter is reviewed. Each blueprint records which choices come from the corpus, deterministic inference, or analyst authorship.</div>
     </div></section>
   </main>

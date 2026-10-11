@@ -68,6 +68,7 @@ h2 { font-size: clamp(1.7rem, 4vw, 3rem); letter-spacing: -.025em; line-height: 
 .metric { border-top: 3px solid var(--accent); padding-top: 14px; }
 .metric strong { display: block; font-size: clamp(1.7rem, 4vw, 2.8rem); letter-spacing: -.03em; }
 .metric span { color: var(--muted); font-size: .9rem; }
+.release-note { color: var(--muted); margin: 24px 0 0; max-width: 80ch; }
 .split { display: grid; grid-template-columns: 1fr 1fr; gap: clamp(28px, 6vw, 72px); }
 .split p { color: var(--muted); }
 .boundary { background: var(--surface); border-left: 4px solid var(--signal); padding: 20px 24px; }
