@@ -1,0 +1,22 @@
+WEBVTT
+
+00:00:00.000 --> 00:00:08.000 line:0%
+AutoSUT: inspect the reviewer package.
+This tour reviews preserved evidence, not a live campaign.
+
+00:00:08.000 --> 00:00:18.000 line:0%
+Each claim has a status, scope, measured value and caveat.
+
+00:00:18.000 --> 00:00:28.000 line:0%
+Expand Evidence artifacts to locate the files behind a claim.
+
+00:00:28.000 --> 00:00:40.000 line:0%
+Compare generated variants with recorded execution.
+The dashboard displays preserved results.
+
+00:00:40.000 --> 00:00:50.000 line:0%
+Raw evidence is grouped by the measurement question it answers.
+
+00:00:50.000 --> 00:01:00.000 line:0%
+Review the evidence and caveats together.
+Preserved records do not establish a new VM execution.
