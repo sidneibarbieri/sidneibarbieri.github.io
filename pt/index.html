@@ -1,0 +1,500 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Sidnei Barbieri — Segurança de IA/LLM e defesa cibernética autônoma</title>
+<meta name="description" content="Doutorando no ITA em segurança de IA/LLM, defesa cibernética autônoma, inteligência de ameaças e experimentação reprodutível em segurança. Artigos, software de pesquisa e contato.">
+<link rel="canonical" href="https://sidneibarbieri.github.io/pt/">
+<link rel="alternate" hreflang="en" href="https://sidneibarbieri.github.io/">
+<link rel="alternate" hreflang="pt-BR" href="https://sidneibarbieri.github.io/pt/">
+<link rel="alternate" hreflang="x-default" href="https://sidneibarbieri.github.io/">
+<script src="../assets/idioma.js" defer></script>
+<meta property="og:type" content="profile">
+<meta property="og:title" content="Sidnei Barbieri — Segurança de IA/LLM e defesa cibernética autônoma">
+<meta property="og:locale" content="pt_BR">
+<meta property="og:description" content="Doutorando no ITA. Artigos e software de pesquisa sobre defesa cibernética assistida por LLM, emulação de adversários e experimentação reprodutível em segurança.">
+<meta property="og:url" content="https://sidneibarbieri.github.io/pt/">
+<meta property="og:image" content="https://sidneibarbieri.github.io/assets/portrait.jpg">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%2310233F'/%3E%3Ctext x='16' y='22' font-family='Inter,Helvetica,Arial' font-size='16' font-weight='700' fill='%23fff' text-anchor='middle'%3ESB%3C/text%3E%3C/svg%3E">
+<style>
+@font-face {
+  font-family: "Inter";
+  src: url("assets/fonts/InterVariable-latin.woff2") format("woff2");
+  font-weight: 100 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+:root {
+  --ink: #10233F;
+  --slate: #667085;
+  --accent: #2867B2;
+  --rule: #E2E8F0;
+  --surface: #F6F8FB;
+  --paper: #FFFFFF;
+  --measure: 62ch;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --ink: #E8EDF4;
+    --slate: #9AA7B8;
+    --accent: #6FA3E0;
+    --rule: #22364F;
+    --surface: #122238;
+    --paper: #0B1627;
+  }
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  background: var(--paper);
+  color: var(--ink);
+  font-family: Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+  font-size: 17px;
+  line-height: 1.62;
+  -webkit-font-smoothing: antialiased;
+}
+
+a { color: var(--accent); text-decoration: none; }
+a:hover { text-decoration: underline; text-underline-offset: 3px; }
+a:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; border-radius: 3px; }
+
+.skip {
+  position: absolute;
+  left: -9999px;
+}
+.skip:focus {
+  left: 1rem;
+  top: 1rem;
+  z-index: 10;
+  background: var(--paper);
+  padding: .6rem 1rem;
+  border: 1px solid var(--rule);
+  border-radius: 6px;
+}
+
+.wrap { max-width: 960px; margin: 0 auto; padding: 0 24px; }
+
+header {
+  position: sticky;
+  top: 0;
+  z-index: 5;
+  background: color-mix(in srgb, var(--paper) 88%, transparent);
+  backdrop-filter: blur(8px);
+  border-bottom: 1px solid var(--rule);
+}
+header .wrap {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  min-height: 60px;
+  flex-wrap: wrap;
+}
+header strong { font-size: .95rem; letter-spacing: -.01em; }
+nav { display: flex; gap: 1.1rem; flex-wrap: wrap; }
+nav a { color: var(--slate); font-size: .88rem; }
+nav a:hover { color: var(--ink); }
+nav a.idioma { border: 1px solid var(--line, #d8dde4); border-radius: 4px; padding: 2px 8px; }
+
+.hero { padding: clamp(3rem, 7vw, 5.5rem) 0 2.6rem; }
+.hero .wrap { display: grid; grid-template-columns: minmax(0, 1fr) 220px; gap: clamp(1.5rem, 5vw, 3.5rem); align-items: start; }
+h1 {
+  font-size: clamp(2.1rem, 5.4vw, 3.15rem);
+  line-height: 1.06;
+  letter-spacing: -.028em;
+  margin: 0 0 .7rem;
+  font-weight: 640;
+}
+.role { color: var(--accent); font-weight: 600; font-size: 1.02rem; margin: 0 0 .9rem; }
+.lede { font-size: 1.1rem; max-width: var(--measure); margin: 0 0 1.4rem; color: var(--ink); }
+.affiliation { color: var(--slate); font-size: .95rem; margin: 0 0 1.5rem; max-width: var(--measure); }
+.portrait {
+  width: 220px;
+  height: 275px;
+  border-radius: 12px;
+  object-fit: cover;
+  object-position: 50% 42%;
+  border: 1px solid var(--rule);
+}
+.links { display: flex; flex-wrap: wrap; gap: .55rem; }
+.links a {
+  border: 1px solid var(--rule);
+  border-radius: 999px;
+  padding: .32rem .85rem;
+  font-size: .87rem;
+  color: var(--ink);
+}
+.links a:hover { border-color: var(--accent); color: var(--accent); text-decoration: none; }
+
+section { padding: 2.6rem 0; border-top: 1px solid var(--rule); }
+.label {
+  font-size: .74rem;
+  letter-spacing: .12em;
+  text-transform: uppercase;
+  color: var(--slate);
+  font-weight: 700;
+  margin: 0 0 1.2rem;
+}
+.label span { color: var(--accent); margin-right: .6rem; }
+h2 { font-size: 1.5rem; letter-spacing: -.018em; margin: 0 0 1rem; font-weight: 640; }
+h3 { font-size: 1.02rem; margin: 0 0 .35rem; font-weight: 640; letter-spacing: -.01em; }
+p { max-width: var(--measure); }
+
+.themes { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 1.6rem; }
+.themes p { color: var(--slate); font-size: .95rem; margin: 0; }
+
+.cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1rem; }
+.card {
+  border: 1px solid var(--rule);
+  border-radius: 10px;
+  padding: 1.15rem 1.25rem;
+  background: var(--surface);
+}
+.card p { color: var(--slate); font-size: .93rem; margin: 0 0 .8rem; }
+.card .meta { font-size: .85rem; display: flex; flex-wrap: wrap; gap: .45rem .8rem; }
+.card .meta a { white-space: nowrap; }
+
+ol.papers { list-style: none; margin: 0; padding: 0; }
+ol.papers li { padding: .95rem 0; border-bottom: 1px solid var(--rule); }
+ol.papers li:last-child { border-bottom: 0; }
+.paper-title { font-weight: 600; letter-spacing: -.01em; }
+.paper-authors, .paper-venue { color: var(--slate); font-size: .9rem; }
+.paper-venue a { margin-left: .7rem; }
+.year { color: var(--slate); font-size: .8rem; letter-spacing: .1em; font-weight: 700; margin: 1.4rem 0 .2rem; }
+
+figure { margin: 0; }
+figure img { width: 100%; height: auto; border-radius: 10px; border: 1px solid var(--rule); display: block; }
+figcaption { color: var(--slate); font-size: .88rem; margin-top: .6rem; }
+.talk { display: grid; grid-template-columns: 1.05fr 1fr; gap: 1.8rem; align-items: center; }
+
+dl.timeline { margin: 0; display: grid; grid-template-columns: 150px 1fr; gap: .2rem 1.5rem; }
+dl.timeline dt { color: var(--slate); font-size: .88rem; padding-top: .55rem; }
+dl.timeline dd { margin: 0; padding: .55rem 0; border-top: 1px solid var(--rule); }
+dl.timeline dd span { display: block; color: var(--slate); font-size: .9rem; }
+
+footer { border-top: 1px solid var(--rule); padding: 1.8rem 0 3rem; color: var(--slate); font-size: .86rem; }
+footer .wrap { display: flex; justify-content: space-between; gap: 1rem; flex-wrap: wrap; }
+
+@media (max-width: 720px) {
+  .hero .wrap { grid-template-columns: 1fr; }
+  .portrait { width: 144px; height: 180px; }
+  .talk { grid-template-columns: 1fr; }
+  dl.timeline { grid-template-columns: 1fr; gap: 0; }
+  dl.timeline dt { padding-top: .9rem; border-top: 1px solid var(--rule); }
+  dl.timeline dd { border-top: 0; padding-top: .15rem; }
+}
+</style>
+</head>
+<body>
+<a class="skip" href="#main">Ir para o conteúdo</a>
+
+<header>
+  <div class="wrap">
+    <strong>Sidnei Barbieri</strong>
+    <nav aria-label="Seções">
+      <a href="#research">Pesquisa</a>
+      <a href="#software">Software</a>
+      <a href="#publications">Publicações</a>
+      <a href="#background">Trajetória</a>
+      <a href="#contact">Contato</a>
+      <a class="idioma" href="../" hreflang="en" lang="en" data-idioma="en">English</a>
+    </nav>
+  </div>
+</header>
+
+<main id="main">
+
+<div class="hero">
+  <div class="wrap">
+    <div>
+      <h1>Sidnei Barbieri</h1>
+      <p class="role">Segurança de IA/LLM · Defesa cibernética autônoma · Emulação de adversários</p>
+      <p class="lede">Construo e avalio sistemas de defesa cibernética assistidos por IA, ligando
+      inteligência de ameaças cibernéticas, emulação de adversários, ambientes de SOC e
+      experimentação reprodutível em segurança. Cada resultado publicado vem com evidência
+      auditável e um caminho documentado de reprodução.</p>
+      <p class="affiliation">Doutorando em Ciência da Computação no Instituto Tecnológico de
+      Aeronáutica (ITA), com conclusão prevista para 2027. Foi pesquisador visitante no CyLab,
+      Carnegie Mellon University. Oficial do Exército Brasileiro.</p>
+      <div class="links">
+        <a href="mailto:sidneibarbieri@gmail.com">E-mail</a>
+        <a href="https://github.com/sidneibarbieri">GitHub</a>
+        <a href="https://orcid.org/0000-0001-9090-9469">ORCID</a>
+        <a href="http://lattes.cnpq.br/5930510403083120">Lattes</a>
+        <a href="https://www.linkedin.com/in/sidnei-barbieri-157195137/">LinkedIn</a>
+      </div>
+    </div>
+    <picture>
+      <source srcset="../assets/portrait.webp" type="image/webp">
+      <img class="portrait" src="../assets/portrait.jpg" width="220" height="275" alt="Retrato de Sidnei Barbieri">
+    </picture>
+  </div>
+</div>
+
+<section id="research">
+  <div class="wrap">
+    <p class="label"><span>01</span>Pesquisa</p>
+    <h2>Três perguntas, um método: medir e depois tornar reprodutível.</h2>
+    <div class="themes">
+      <div>
+        <h3>Defesa cibernética autônoma</h3>
+        <p>O que um defensor assistido por LLM pode fazer, escrito como ações tipadas e política
+        verificável, para que seus planos sejam conferidos em vez de aceitos por confiança, e medidos entre ambientes.</p>
+      </div>
+      <div>
+        <h3>Da inteligência de ameaças à emulação de adversários</h3>
+        <p>O que a inteligência de ameaças estruturada ainda deixa de dizer: a semântica de
+        procedimento e de ambiente de que uma emulação precisa para que a campanha sequer rode.</p>
+      </div>
+      <div>
+        <h3>Experimentação reprodutível em segurança</h3>
+        <p>Transformar evidência de produção e literatura em artefatos congelados e versionados que
+        um revisor pode executar de novo, com o denominador de cada número declarado.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="software">
+  <div class="wrap">
+    <p class="label"><span>02</span>Software de pesquisa</p>
+    <h2>Artefatos que rodam.</h2>
+    <div class="cards">
+      <div class="card">
+        <h3>TopVenues</h3>
+        <p>Um corpus reprodutível da literatura de cibersegurança e a ferramenta que o consulta:
+        bases SQLite congeladas identificadas por SHA-256, busca ranqueada, análise de autores e
+        exportações prontas para revisão. Publicado no SBSeg 2026, nas trilhas principal e de ferramentas.</p>
+        <p class="meta">
+          <a href="https://sidneibarbieri.github.io/topVenues/">Página do projeto</a>
+          <a href="https://github.com/sidneibarbieri/topVenues">Código</a>
+          <a href="https://huggingface.co/datasets/sidneibarbieri/topvenues">Dados</a>
+        </p>
+      </div>
+      <div class="card">
+        <h3>SOCpilot</h3>
+        <p>Verificação determinística da conformidade com políticas em planos de resposta a
+        incidentes gerados por LLM, avaliada em incidentes reais de um SOC. A liberação do artefato
+        aguarda a conclusão de uma revisão independente de segurança para publicação.</p>
+        <p class="meta">
+          <a href="https://sidneibarbieri.github.io/socpilot/">Projeto SOCpilot (em inglês)</a>
+          <a href="https://arxiv.org/abs/2605.05501">Preprint do SOCpilot</a>
+        </p>
+      </div>
+      <div class="card">
+        <h3>PocketAgents</h3>
+        <p>Uma biblioteca de agentes autônomos de defesa descritos por manifesto, com limites de
+        ação tipados e aplicação em malha fechada.</p>
+        <p class="meta"><a href="https://arxiv.org/abs/2605.21694">Artigo</a></p>
+      </div>
+      <div class="card">
+        <h3>STICKS</h3>
+        <p>Reconstrução dos procedimentos de uma campanha a partir de inteligência de ameaças
+        estruturada, com um catálogo versionado de procedimentos e admissão determinística sob
+        um contrato de laboratório declarado. Registra quais escolhas vêm da fonte e quais a
+        reconstrução supre; admitir um passo não é evidência de execução.</p>
+        <p class="meta">
+          <a href="https://sidneibarbieri.github.io/sticks/">Projeto STICKS (em inglês)</a>
+          <a href="https://arxiv.org/abs/2512.12078">Preprint do STICKS</a>
+          <a href="https://github.com/sidneibarbieri/sticks-artifact">Artefato do STICKS</a>
+        </p>
+      </div>
+      <div class="card">
+        <h3>AutoSUT</h3>
+        <p>Medição dos requisitos de ambiente que a inteligência de ameaças estruturada fornece e
+        das escolhas de implantação que deixa em aberto. Seu fluxo de qualificação distingue um
+        plano de laboratório compatível, um ambiente implantado e um efeito de execução observado.</p>
+        <p class="meta">
+          <a href="https://sidneibarbieri.github.io/autosut/">Projeto AutoSUT (em inglês)</a>
+          <a href="https://arxiv.org/abs/2606.08700">Preprint do AutoSUT</a>
+          <a href="https://github.com/sidneibarbieri/autosut">Artefato do AutoSUT</a>
+        </p>
+      </div>
+      <div class="card">
+        <h3>ARENA</h3>
+        <p>Uma arquitetura para medir se um defensor cibernético autônomo se transfere do ambiente
+        em que foi construído para um que nunca viu.</p>
+        <p class="meta"><a href="https://arxiv.org/abs/2606.21377">Artigo</a></p>
+      </div>
+      <div class="card">
+        <h3>Hikari</h3>
+        <p>Uma plataforma gamificada de threat hunting sobre o Elastic Stack e o CTFd: equipes
+        investigam uma intrusão encenada num SIEM, e cada consulta vira dado de pesquisa.</p>
+        <p class="meta">
+          <a href="../hikari/">Página do projeto</a>
+          <a href="https://doi.org/10.5753/sbseg.2025.11500">Artigo</a>
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="publications">
+  <div class="wrap">
+    <p class="label"><span>03</span>Publicações</p>
+    <h2>Trabalhos selecionados.</h2>
+    <p class="year">2026</p>
+    <ol class="papers">
+      <li>
+        <div class="paper-title">TopVenues: A Reproducible Corpus and Tooling Substrate for Cybersecurity Literature Reviews</div>
+        <div class="paper-authors">Sidnei Barbieri, Ágney Lopes Roth Ferraz, Lourenço Alves Pereira Júnior</div>
+        <div class="paper-venue">SBSeg 2026, trilha principal
+          <a href="https://sol.sbc.org.br/index.php/sbseg/article/view/44350">Anais</a>
+          <a href="https://arxiv.org/abs/2606.18320">arXiv</a>
+        </div>
+      </li>
+      <li>
+        <div class="paper-title">TopVenues: An Executable Corpus and Research Tool for Cybersecurity Literature Reviews</div>
+        <div class="paper-authors">Sidnei Barbieri, Ágney Lopes Roth Ferraz, Lourenço Alves Pereira Júnior</div>
+        <div class="paper-venue">SBSeg 2026, trilha de ferramentas
+          <a href="https://sol.sbc.org.br/index.php/sbseg_estendido/article/view/44470">Anais</a>
+        </div>
+      </li>
+      <li>
+        <div class="paper-title">SOCpilot: Verifying Policy Compliance for LLM-Assisted Incident Response</div>
+        <div class="paper-authors">Sidnei Barbieri, Ágney Lopes Roth Ferraz, Leonardo Vaz de Meneses, Wagner Comin Sonaglio, Marcus Botacin, Lourenço Alves Pereira Júnior</div>
+        <div class="paper-venue">Preprint <a href="https://arxiv.org/abs/2605.05501">arXiv:2605.05501</a></div>
+      </li>
+      <li>
+        <div class="paper-title">PocketAgents: A Manifest-Driven Library of Autonomous Defense Agents</div>
+        <div class="paper-authors">Sidnei Barbieri, Ágney Lopes Roth Ferraz, Lourenço Alves Pereira Júnior</div>
+        <div class="paper-venue">Preprint <a href="https://arxiv.org/abs/2605.21694">arXiv:2605.21694</a></div>
+      </li>
+      <li>
+        <div class="paper-title">ARENA: An Architecture for Measuring the Transferability of Autonomous Cyber Defense</div>
+        <div class="paper-authors">Sidnei Barbieri, Ágney Lopes Roth Ferraz, Wagner Comin Sonaglio, Gioliano de Oliveira Braga, Henrique Curi de Miranda, Lourenço Alves Pereira Júnior</div>
+        <div class="paper-venue">Preprint <a href="https://arxiv.org/abs/2606.21377">arXiv:2606.21377</a></div>
+      </li>
+      <li>
+        <div class="paper-title">AutoSUT: The Environment Semantics Gap in Structured CTI for Adversary Emulation</div>
+        <div class="paper-authors">Sidnei Barbieri, Ágney Lopes Roth Ferraz, Marcus Botacin, Lourenço Alves Pereira Júnior</div>
+        <div class="paper-venue">Preprint <a href="https://arxiv.org/abs/2606.08700">arXiv:2606.08700</a></div>
+      </li>
+      <li>
+        <div class="paper-title">From Production SIEM to Reusable Cybersecurity Artifacts</div>
+        <div class="paper-authors">Sidnei Barbieri, Leonardo Vaz de Meneses, Ágney Lopes Roth Ferraz, Wagner Comin Sonaglio, Lourenço Alves Pereira Júnior</div>
+        <div class="paper-venue">Preprint <a href="https://arxiv.org/abs/2606.21389">arXiv:2606.21389</a></div>
+      </li>
+    </ol>
+    <p class="year">2025</p>
+    <ol class="papers">
+      <li>
+        <div class="paper-title">Searching for Diamonds: Cross-Domain Opportunities in Cyber Threat Intelligence</div>
+        <div class="paper-authors">Sidnei Barbieri, Flavio Luiz dos Santos de Souza, Marcio Andrey Teixeira, Cesar Augusto Cavalheiro Marcondes, Lourenço Alves Pereira</div>
+        <div class="paper-venue">IEEE Access <a href="https://doi.org/10.1109/ACCESS.2025.3627126">DOI</a></div>
+      </li>
+      <li>
+        <div class="paper-title">HIKARI – Desafios Reais, Ameaças Ocultas: Uma Plataforma de Threat Hunting Gamificada</div>
+        <div class="paper-authors">Sidnei Barbieri, Bruno Moreira Camargos Belo, Leonardo Chahud, Leonardo Vaz de Meneses, Cesar Marcondes, Lourenço Alves Pereira Júnior</div>
+        <div class="paper-venue">SBSeg 2025, em português <a href="https://doi.org/10.5753/sbseg.2025.11500">DOI</a></div>
+      </li>
+      <li>
+        <div class="paper-title">The Procedural Semantics Gap in Structured CTI: A Measurement-Driven STIX Analysis for APT Emulation</div>
+        <div class="paper-authors">Sidnei Barbieri, Ágney Lopes Roth Ferraz, Marcus Botacin, Lourenço Alves Pereira Júnior</div>
+        <div class="paper-venue">Preprint <a href="https://arxiv.org/abs/2512.12078">arXiv:2512.12078</a></div>
+      </li>
+    </ol>
+    <p style="margin-top:1.4rem;color:var(--slate);font-size:.93rem">A lista completa, com os
+    trabalhos anteriores em detecção de intrusão com aprendizado de máquina e geração de carga, está no
+    <a href="https://orcid.org/0000-0001-9090-9469">ORCID</a> e no
+    <a href="http://lattes.cnpq.br/5930510403083120">Lattes</a>.</p>
+  </div>
+</section>
+
+<section id="talks">
+  <div class="wrap">
+    <p class="label"><span>04</span>Palestras</p>
+    <div class="talk">
+      <figure>
+        <img src="../assets/sbseg-2026-talk.webp" width="1200" height="800" alt="Sidnei Barbieri apresentando no SBSeg 2026">
+      </figure>
+      <div>
+        <h3>TopVenues no SBSeg 2026</h3>
+        <p>O corpus apresentado como artefato de pesquisa executável: como uma revisão da literatura
+        ganha um denominador declarado, congelado e reprodutível com um comando, e o que o corpus
+        não consegue responder.</p>
+        <p class="meta"><a href="https://sidneibarbieri.github.io/topVenues/">Página do projeto</a></p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="background">
+  <div class="wrap">
+    <p class="label"><span>05</span>Trajetória</p>
+    <dl class="timeline">
+      <dt>2023 — hoje</dt>
+      <dd>Doutorado, Instituto Tecnológico de Aeronáutica (ITA)
+        <span>Defesa cibernética autônoma e assistida por LLM, inteligência de ameaças, emulação de adversários, experimentação em SOC.</span></dd>
+      <dt>2025 — 2026</dt>
+      <dd>Pesquisador visitante, CyLab, Carnegie Mellon University
+        <span>Período de doutorado sanduíche sobre operacionalização de inteligência de ameaças e defesa cibernética assistida por IA/LLM.</span></dd>
+      <dt>2019 — 2023</dt>
+      <dd>Analista e pesquisador de inteligência de ameaças, Centro de Defesa Cibernética (CDCiber)
+        <span>Análise de ameaças, threat hunting, monitoramento orientado por telemetria e apoio à resposta a incidentes.</span></dd>
+      <dt>2015 — 2017</dt>
+      <dd>Centro de Defesa Cibernética (CDCiber)
+        <span>Chefe da Divisão de TI, depois da Segurança de Sistemas, e assistente do Chefe de Inteligência.</span></dd>
+      <dt>2002 — hoje</dt>
+      <dd>Exército Brasileiro, atualmente Capitão
+        <span>Tecnologia da informação, apoio de inteligência, cibersegurança e operações cibernéticas; Locked Shields 2022.</span></dd>
+      <dt>Formação</dt>
+      <dd>Mestrado em Ciência da Computação, ITA (2019) · Bacharelado em Ciência da Computação, URI (2009)
+        <span>Especializações em guerra cibernética (CIGE, 2020) e gestão de sistemas de informação (2016).</span></dd>
+    </dl>
+  </div>
+</section>
+
+<section id="contact">
+  <div class="wrap">
+    <p class="label"><span>06</span>Contato</p>
+    <h2>Colaborações são bem-vindas; cada liberação segue a evidência.</h2>
+    <p>Meu software de pesquisa nasce do trabalho em defesa cibernética reprodutível e autônoma
+    e é liberado quando evidência, licenciamento e privacidade passam pela validação. Propostas de
+    colaboração em pesquisa, apoio institucional, licenciamento e transferência de tecnologia são
+    bem-vindas por e-mail.</p>
+    <div class="links">
+      <a href="mailto:sidneibarbieri@gmail.com">sidneibarbieri@gmail.com</a>
+      <a href="https://github.com/sidneibarbieri">github.com/sidneibarbieri</a>
+      <a href="https://orcid.org/0000-0001-9090-9469">ORCID</a>
+      <a href="http://lattes.cnpq.br/5930510403083120">Lattes</a>
+      <a href="https://www.linkedin.com/in/sidnei-barbieri-157195137/">LinkedIn</a>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer>
+  <div class="wrap">
+    <span>Instituto Tecnológico de Aeronáutica, São José dos Campos, Brasil</span>
+    <span>Atualizado em outubro de 2026</span>
+  </div>
+</footer>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "name": "Sidnei Barbieri",
+  "url": "https://sidneibarbieri.github.io/pt/",
+  "image": "https://sidneibarbieri.github.io/assets/portrait.jpg",
+  "email": "mailto:sidneibarbieri@gmail.com",
+  "jobTitle": "PhD candidate in Computer Science",
+  "affiliation": {"@type": "Organization", "name": "Instituto Tecnológico de Aeronáutica (ITA)"},
+  "knowsAbout": ["AI/LLM security", "Autonomous cyber defense", "Cyber threat intelligence", "Adversary emulation", "Reproducible security experimentation"],
+  "sameAs": [
+    "https://github.com/sidneibarbieri",
+    "https://orcid.org/0000-0001-9090-9469",
+    "http://lattes.cnpq.br/5930510403083120",
+    "https://www.linkedin.com/in/sidnei-barbieri-157195137/"
+  ]
+}
+</script>
+</body>
+</html>

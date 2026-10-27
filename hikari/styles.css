@@ -480,7 +480,11 @@ footer {
   text-underline-offset: 3px;
 }
 
-.wordmark span { color: var(--gold, #a8823f); }
+nav a.idioma {
+  border: 1px solid var(--line);
+  border-radius: 4px;
+  padding: 2px 8px;
+}
 
 .figure-row {
   display: grid;

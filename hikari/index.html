@@ -1,148 +1,154 @@
 <!doctype html>
-<html lang="en">
+<html lang="pt-BR">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Hikari is a gamified threat-hunting platform: teams investigate a staged intrusion through a SIEM, and every query they run becomes research data.">
-  <title>Hikari | Hunt the Evidence</title>
+  <meta name="description" content="Hikari é uma plataforma gamificada de threat hunting: equipes investigam uma intrusão encenada num SIEM, e cada consulta vira dado de pesquisa.">
+  <title>Hikari | Siga a evidência</title>
+  <link rel="canonical" href="https://sidneibarbieri.github.io/hikari/">
+  <link rel="alternate" hreflang="pt-BR" href="https://sidneibarbieri.github.io/hikari/">
+  <link rel="alternate" hreflang="en" href="https://sidneibarbieri.github.io/hikari/en/">
+  <link rel="alternate" hreflang="x-default" href="https://sidneibarbieri.github.io/hikari/">
   <link rel="icon" href="favicon.svg" type="image/svg+xml">
-  <link rel="stylesheet" href="styles.css?v=20261027">
+  <link rel="stylesheet" href="styles.css?v=20261027b">
+  <script src="../assets/idioma.js" defer></script>
 </head>
 <body>
-  <a class="skip-link" href="#top">Skip to main content</a>
+  <a class="skip-link" href="#top">Ir para o conteúdo</a>
   <header class="site-header">
-    <a class="wordmark" href="#top">HIKA<span>RI</span></a>
-    <nav aria-label="Primary navigation">
-      <a href="#principle">Principle</a>
-      <a href="#method">Method</a>
-      <a href="#editions">Editions</a>
-      <a href="#training">Training</a>
-      <a href="#publications">Publications</a>
+    <a class="wordmark" href="#top">Hikari</a>
+    <nav aria-label="Navegação principal">
+      <a href="#principio">Princípio</a>
+      <a href="#metodo">Método</a>
+      <a href="#edicoes">Edições</a>
+      <a href="#treino">Treino</a>
+      <a href="#publicacoes">Publicações</a>
+      <a class="idioma" href="en/" hreflang="en" lang="en" data-idioma="en">English</a>
     </nav>
   </header>
 
   <main id="top" tabindex="-1">
     <section class="hero">
       <div class="hero-copy">
-        <p class="eyebrow">Research platform</p>
-        <h1>Hunt the evidence,<br>not the flag.</h1>
-        <p class="lede">Hikari is a gamified threat-hunting platform. Teams investigate a staged intrusion through a SIEM, answer with what the logs show, and every query they run becomes research data.</p>
+        <p class="eyebrow">Plataforma de pesquisa</p>
+        <h1>Siga<br>a evidência.</h1>
+        <p class="lede">Hikari é uma plataforma gamificada de threat hunting. Equipes investigam uma intrusão encenada num SIEM, respondem com o que os registros mostram, e cada consulta que fazem vira dado de pesquisa.</p>
         <p class="hero-links">
-          <a class="text-link" href="#editions">See the editions <span>↓</span></a>
-          <a class="text-link" href="https://doi.org/10.5753/sbseg.2025.11500">Read the SBSeg 2025 paper <span aria-hidden="true">↗</span></a>
+          <a class="text-link" href="#edicoes">Ver as edições <span>↓</span></a>
+          <a class="text-link" href="https://doi.org/10.5753/sbseg.2025.11500">Ler o artigo do SBSeg 2025 <span aria-hidden="true">↗</span></a>
         </p>
       </div>
 
-      <div class="boundary-figure" role="img" aria-label="A staged intrusion produces logs; teams query them in a SIEM; answers are checked against the evidence; queries and submissions are exported as a research package.">
+      <div class="boundary-figure" role="img" aria-label="Uma intrusão encenada gera registros; as equipes os consultam num SIEM; as respostas são conferidas contra a evidência; consultas e submissões são exportadas num pacote de pesquisa.">
         <div class="stage muted">
           <span class="stage-index">01</span>
-          <strong>Scenario</strong>
-          <small>fictional company, staged intrusion</small>
+          <strong>Cenário</strong>
+          <small>empresa fictícia, intrusão encenada</small>
         </div>
         <span class="connector" aria-hidden="true">→</span>
         <div class="stage role-structure">
           <span class="stage-index">02</span>
           <strong>SIEM</strong>
-          <small>Elastic Stack over the scenario logs</small>
+          <small>Elastic Stack sobre os registros do cenário</small>
         </div>
         <span class="connector" aria-hidden="true">→</span>
         <div class="stage role-check">
           <span class="stage-index">03</span>
-          <strong>Answer</strong>
-          <small>checked against the evidence</small>
+          <strong>Resposta</strong>
+          <small>conferida contra a evidência</small>
         </div>
         <span class="connector" aria-hidden="true">→</span>
         <div class="stage role-assumption">
           <span class="stage-index">04</span>
-          <strong>Record</strong>
-          <small>queries, submissions, hints</small>
+          <strong>Registro</strong>
+          <small>consultas, submissões, dicas</small>
         </div>
       </div>
     </section>
 
-    <section class="statement" id="principle">
-      <p class="section-number">01 / Principle</p>
-      <h2>Every answer is<br>in the logs.</h2>
-      <p>Each challenge asks a question an analyst would ask during an investigation: which host, which account, at what time. The answer exists only in the scenario's evidence, so a team scores by querying the SIEM rather than by guessing. Hints cost points, and after the run each challenge opens a commented solution with the answer, the path to it and what the case teaches.</p>
+    <section class="statement" id="principio">
+      <p class="section-number">01 / Princípio</p>
+      <h2>Toda resposta está<br>nos registros.</h2>
+      <p>Cada desafio faz a pergunta que um analista faria numa investigação: qual máquina, qual conta, a que horas. A resposta existe só na evidência do cenário, e a equipe pontua consultando o SIEM. Dicas custam pontos, e ao fim da prova cada desafio abre a solução comentada: a resposta, o caminho até ela e o que o caso ensina.</p>
     </section>
 
-    <section class="method" id="method">
-      <p class="section-number">02 / Method</p>
+    <section class="method" id="metodo">
+      <p class="section-number">02 / Método</p>
       <div class="method-grid">
-        <h2>One scenario.<br>Every move recorded.</h2>
+        <h2>Um cenário.<br>Cada passo registrado.</h2>
         <ol>
-          <li><span>Scenario</span>A fictional organization with a generated intrusion and its logs.</li>
-          <li><span>SIEM</span>Kibana over the scenario, the tool analysts use at work.</li>
-          <li><span>Challenges</span>Scored by team, with answers in a fixed, taught format.</li>
-          <li><span>Telemetry</span>SIEM queries, submissions and hints logged per team.</li>
-          <li><span>Export</span>A versioned, pseudonymized data package for each run.</li>
+          <li><span>Cenário</span>Uma organização fictícia, com uma intrusão gerada e seus registros.</li>
+          <li><span>SIEM</span>Kibana sobre o cenário, a ferramenta que analistas usam no trabalho.</li>
+          <li><span>Desafios</span>Pontuação por equipe, com respostas num formato fixo e ensinado.</li>
+          <li><span>Telemetria</span>Consultas ao SIEM, submissões e dicas registradas por equipe.</li>
+          <li><span>Exportação</span>Um pacote de dados versionado e pseudonimizado para cada prova.</li>
         </ol>
       </div>
       <div class="figure-row">
         <figure>
-          <img src="assets/img/siem.jpg" alt="Kibana showing the scenario logs during an investigation" loading="lazy">
-          <figcaption>Investigating in the SIEM.</figcaption>
+          <img src="assets/img/siem.jpg" alt="Kibana mostrando os registros do cenário durante uma investigação" loading="lazy">
+          <figcaption>A investigação no SIEM.</figcaption>
         </figure>
         <figure>
-          <img src="assets/img/placar.jpg" alt="Team scoreboard of a Hikari run" loading="lazy">
-          <figcaption>The scoreboard during a run.</figcaption>
+          <img src="assets/img/placar.jpg" alt="Placar das equipes numa prova do Hikari" loading="lazy">
+          <figcaption>O placar durante a prova.</figcaption>
         </figure>
         <figure>
-          <img src="assets/img/operacao.jpg" alt="Organizer view of a running competition" loading="lazy">
-          <figcaption>The organizer's view of a run.</figcaption>
+          <img src="assets/img/operacao.jpg" alt="Visão da organização durante uma competição" loading="lazy">
+          <figcaption>A visão da organização.</figcaption>
         </figure>
       </div>
     </section>
 
-    <section class="evidence" id="editions">
-      <p class="section-number">03 / Editions</p>
+    <section class="evidence" id="edicoes">
+      <p class="section-number">03 / Edições</p>
       <div class="evidence-line">
         <div>
           <strong>RESEG 2025</strong>
-          <p>August 14, 2025, on the predecessor version of the platform. 25 accounts made 1,389 submissions.</p>
+          <p>14 de agosto de 2025, na versão anterior da plataforma. 25 contas fizeram 1.389 submissões.</p>
         </div>
         <div>
           <strong>RESEG 2026</strong>
-          <p>August 26, 2026. 13 teams and 76 registrants over four hours. All 125 challenges were solved at least once, and the teams ran 54,698 SIEM queries.</p>
+          <p>26 de agosto de 2026. 13 equipes e 76 inscritos em quatro horas. Os 125 desafios foram resolvidos ao menos uma vez, e as equipes fizeram 54.698 consultas ao SIEM.</p>
         </div>
         <div>
           <strong>Ciber Week Brisanet 2026</strong>
-          <p>October 15, 2026. 36 teams over five and a half hours on 165 challenges, 65 of them solved, with 20,505 SIEM queries.</p>
+          <p>15 de outubro de 2026. 36 equipes em cinco horas e meia, com 165 desafios, 65 deles resolvidos, e 20.505 consultas ao SIEM.</p>
         </div>
       </div>
     </section>
 
-    <section class="demo" id="training">
-      <p class="section-number">04 / Training</p>
-      <h2>Learn the method<br>on a fictional company.</h2>
-      <p>The short course <em>Threat Hunting na Prática</em> (in Portuguese) teaches the investigation in four cases on the fictional Aurora scenario: notebooks that run in the browser, guided solutions, the course chapter and slides, and the challenge packages for the platform.</p>
-      <video controls preload="none" aria-label="Hikari after a run: commented solutions, questionnaire, certificate and data export">
+    <section class="demo" id="treino">
+      <p class="section-number">04 / Treino</p>
+      <h2>Aprenda o método<br>numa empresa fictícia.</h2>
+      <p>O minicurso <em>Threat Hunting na Prática</em> ensina a investigação em quatro casos sobre o cenário fictício da Aurora: cadernos que rodam no navegador, soluções guiadas, o capítulo e os slides do curso e os pacotes de desafios para a plataforma.</p>
+      <video controls preload="none" aria-label="O Hikari depois da prova: soluções comentadas, questionário, certificado e exportação dos dados">
         <source src="assets/demos/hikari-demo-pesquisa.webm" type="video/webm">
         <track kind="captions" src="assets/demos/captions/pesquisa.vtt" srclang="pt-BR" label="Português" default>
       </video>
-      <p class="demo-help">After the run: commented solutions, the questionnaire, a verifiable certificate and the export of the recorded activity. Recorded on an isolated install.</p>
+      <p class="demo-help">Depois da prova: soluções comentadas, questionário, certificado verificável e exportação da atividade registrada. Gravado numa instalação isolada.</p>
       <p class="hero-links">
-        <a class="text-link" href="minicurso/">Open the course material <span aria-hidden="true">→</span></a>
+        <a class="text-link" href="minicurso/">Abrir o material do curso <span aria-hidden="true">→</span></a>
       </p>
     </section>
 
-    <section class="release" id="publications">
-      <p class="section-number">05 / Publications and data</p>
-      <h2>Published, preserved,<br>available on request.</h2>
-      <p>Edition data hold participant activity and stay private. Researchers interested in the data, the platform or a new edition can write to the author.</p>
+    <section class="release" id="publicacoes">
+      <p class="section-number">05 / Publicações e dados</p>
+      <h2>Publicado, preservado,<br>disponível sob pedido.</h2>
+      <p>Os dados das edições guardam a atividade de participantes e ficam privados. Pesquisadores interessados nos dados, na plataforma ou numa nova edição podem escrever ao autor.</p>
       <dl>
-        <div><dt>Paper</dt><dd>Barbieri, Belo, Chahud, Meneses, Marcondes and Pereira Júnior. <a href="https://doi.org/10.5753/sbseg.2025.11500">HIKARI – Desafios Reais, Ameaças Ocultas: Uma Plataforma de Threat Hunting Gamificada</a>. SBSeg 2025, in Portuguese.</dd></div>
-        <div><dt>Data</dt><dd>Preserved with checksums: RESEG 2025 platform logs, the RESEG 2026 database and corpus, and the versioned Ciber Week Brisanet 2026 package</dd></div>
-        <div><dt>Course</dt><dd><a href="minicurso/">Threat Hunting na Prática</a>, material in Portuguese</dd></div>
-        <div><dt>Contact</dt><dd><a href="https://sidneibarbieri.github.io/#contact">Sidnei Barbieri</a></dd></div>
+        <div><dt>Artigo</dt><dd>Barbieri, Belo, Chahud, Meneses, Marcondes e Pereira Júnior. <a href="https://doi.org/10.5753/sbseg.2025.11500">HIKARI – Desafios Reais, Ameaças Ocultas: Uma Plataforma de Threat Hunting Gamificada</a>. SBSeg 2025.</dd></div>
+        <div><dt>Dados</dt><dd>Preservados com checksums: os registros da plataforma no RESEG 2025, o banco e o corpus do RESEG 2026 e o pacote versionado da Ciber Week Brisanet 2026</dd></div>
+        <div><dt>Curso</dt><dd><a href="minicurso/">Threat Hunting na Prática</a></dd></div>
+        <div><dt>Contato</dt><dd><a href="https://sidneibarbieri.github.io/pt/#contact">Sidnei Barbieri</a></dd></div>
       </dl>
     </section>
   </main>
 
   <footer>
-    <span>Hikari research platform</span>
-    <span>A solved challenge is evidence found, not a guess confirmed.</span>
-    <a href="https://sidneibarbieri.github.io/">Sidnei Barbieri</a>
+    <span>Hikari, plataforma de pesquisa</span>
+    <span>Desafio resolvido é evidência encontrada.</span>
+    <a href="https://sidneibarbieri.github.io/pt/">Sidnei Barbieri</a>
   </footer>
 </body>
 </html>

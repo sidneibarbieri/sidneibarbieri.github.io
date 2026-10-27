@@ -6,6 +6,10 @@
 <title>Sidnei Barbieri — AI/LLM security and autonomous cyber defense</title>
 <meta name="description" content="PhD candidate at ITA working on AI/LLM security, autonomous cyber defense, cyber threat intelligence and reproducible security experimentation. Papers, research software and contact.">
 <link rel="canonical" href="https://sidneibarbieri.github.io/">
+<link rel="alternate" hreflang="en" href="https://sidneibarbieri.github.io/">
+<link rel="alternate" hreflang="pt-BR" href="https://sidneibarbieri.github.io/pt/">
+<link rel="alternate" hreflang="x-default" href="https://sidneibarbieri.github.io/">
+<script src="assets/idioma.js" defer></script>
 <meta property="og:type" content="profile">
 <meta property="og:title" content="Sidnei Barbieri — AI/LLM security and autonomous cyber defense">
 <meta property="og:description" content="PhD candidate at ITA. Papers and research software on LLM-assisted cyber defense, adversary emulation and reproducible security experimentation.">
@@ -94,6 +98,7 @@ header strong { font-size: .95rem; letter-spacing: -.01em; }
 nav { display: flex; gap: 1.1rem; flex-wrap: wrap; }
 nav a { color: var(--slate); font-size: .88rem; }
 nav a:hover { color: var(--ink); }
+nav a.idioma { border: 1px solid var(--line, #d8dde4); border-radius: 4px; padding: 2px 8px; }
 
 .hero { padding: clamp(3rem, 7vw, 5.5rem) 0 2.6rem; }
 .hero .wrap { display: grid; grid-template-columns: minmax(0, 1fr) 220px; gap: clamp(1.5rem, 5vw, 3.5rem); align-items: start; }
@@ -196,6 +201,7 @@ footer .wrap { display: flex; justify-content: space-between; gap: 1rem; flex-wr
       <a href="#publications">Publications</a>
       <a href="#background">Background</a>
       <a href="#contact">Contact</a>
+      <a class="idioma" href="pt/" hreflang="pt-BR" lang="pt-BR" data-idioma="pt">Português</a>
     </nav>
   </div>
 </header>
@@ -256,7 +262,7 @@ footer .wrap { display: flex; justify-content: space-between; gap: 1rem; flex-wr
 <section id="software">
   <div class="wrap">
     <p class="label"><span>02</span>Research software</p>
-    <h2>Artifacts, not screenshots.</h2>
+    <h2>Artifacts you can run.</h2>
     <div class="cards">
       <div class="card">
         <h3>TopVenues</h3>
@@ -316,9 +322,9 @@ footer .wrap { display: flex; justify-content: space-between; gap: 1rem; flex-wr
         <p class="meta"><a href="https://arxiv.org/abs/2606.21377">Paper</a></p>
       </div>
       <div class="card">
-        <h3>HIKARI</h3>
-        <p>A gamified threat-hunting and SOC-simulation range built on the Elastic Stack, Docker
-        and CTFd, used for training and for reproducible blue-team exercises.</p>
+        <h3>Hikari</h3>
+        <p>A gamified threat-hunting platform built on the Elastic Stack and CTFd: teams
+        investigate a staged intrusion in a SIEM, and every query becomes research data.</p>
         <p class="meta">
           <a href="hikari/">Project page</a>
           <a href="https://doi.org/10.5753/sbseg.2025.11500">Paper</a>

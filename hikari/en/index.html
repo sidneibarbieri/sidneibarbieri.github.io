@@ -1,0 +1,154 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Hikari is a gamified threat-hunting platform: teams investigate a staged intrusion through a SIEM, and every query they run becomes research data.">
+  <title>Hikari | Follow the Evidence</title>
+  <link rel="canonical" href="https://sidneibarbieri.github.io/hikari/en/">
+  <link rel="alternate" hreflang="pt-BR" href="https://sidneibarbieri.github.io/hikari/">
+  <link rel="alternate" hreflang="en" href="https://sidneibarbieri.github.io/hikari/en/">
+  <link rel="alternate" hreflang="x-default" href="https://sidneibarbieri.github.io/hikari/">
+  <link rel="icon" href="../favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="../styles.css?v=20261027b">
+  <script src="../../assets/idioma.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#top">Skip to main content</a>
+  <header class="site-header">
+    <a class="wordmark" href="#top">Hikari</a>
+    <nav aria-label="Primary navigation">
+      <a href="#principle">Principle</a>
+      <a href="#method">Method</a>
+      <a href="#editions">Editions</a>
+      <a href="#training">Training</a>
+      <a href="#publications">Publications</a>
+      <a class="idioma" href="../" hreflang="pt-BR" lang="pt-BR" data-idioma="pt">Português</a>
+    </nav>
+  </header>
+
+  <main id="top" tabindex="-1">
+    <section class="hero">
+      <div class="hero-copy">
+        <p class="eyebrow">Research platform</p>
+        <h1>Follow<br>the evidence.</h1>
+        <p class="lede">Hikari is a gamified threat-hunting platform, in Portuguese. Teams investigate a staged intrusion through a SIEM, answer with what the logs show, and every query they run becomes research data.</p>
+        <p class="hero-links">
+          <a class="text-link" href="#editions">See the editions <span>↓</span></a>
+          <a class="text-link" href="https://doi.org/10.5753/sbseg.2025.11500">Read the SBSeg 2025 paper <span aria-hidden="true">↗</span></a>
+        </p>
+      </div>
+
+      <div class="boundary-figure" role="img" aria-label="A staged intrusion produces logs; teams query them in a SIEM; answers are checked against the evidence; queries and submissions are exported as a research package.">
+        <div class="stage muted">
+          <span class="stage-index">01</span>
+          <strong>Scenario</strong>
+          <small>fictional company, staged intrusion</small>
+        </div>
+        <span class="connector" aria-hidden="true">→</span>
+        <div class="stage role-structure">
+          <span class="stage-index">02</span>
+          <strong>SIEM</strong>
+          <small>Elastic Stack over the scenario logs</small>
+        </div>
+        <span class="connector" aria-hidden="true">→</span>
+        <div class="stage role-check">
+          <span class="stage-index">03</span>
+          <strong>Answer</strong>
+          <small>checked against the evidence</small>
+        </div>
+        <span class="connector" aria-hidden="true">→</span>
+        <div class="stage role-assumption">
+          <span class="stage-index">04</span>
+          <strong>Record</strong>
+          <small>queries, submissions, hints</small>
+        </div>
+      </div>
+    </section>
+
+    <section class="statement" id="principle">
+      <p class="section-number">01 / Principle</p>
+      <h2>Every answer is<br>in the logs.</h2>
+      <p>Each challenge asks a question an analyst would ask during an investigation: which host, which account, at what time. The answer exists only in the scenario's evidence, so a team scores by querying the SIEM. Hints cost points, and after the run each challenge opens a commented solution with the answer, the path to it and what the case teaches.</p>
+    </section>
+
+    <section class="method" id="method">
+      <p class="section-number">02 / Method</p>
+      <div class="method-grid">
+        <h2>One scenario.<br>Every move recorded.</h2>
+        <ol>
+          <li><span>Scenario</span>A fictional organization with a generated intrusion and its logs.</li>
+          <li><span>SIEM</span>Kibana over the scenario, the tool analysts use at work.</li>
+          <li><span>Challenges</span>Scored by team, with answers in a fixed, taught format.</li>
+          <li><span>Telemetry</span>SIEM queries, submissions and hints logged per team.</li>
+          <li><span>Export</span>A versioned, pseudonymized data package for each run.</li>
+        </ol>
+      </div>
+      <div class="figure-row">
+        <figure>
+          <img src="../assets/img/siem.jpg" alt="Kibana showing the scenario logs during an investigation" loading="lazy">
+          <figcaption>Investigating in the SIEM.</figcaption>
+        </figure>
+        <figure>
+          <img src="../assets/img/placar.jpg" alt="Team scoreboard of a Hikari run" loading="lazy">
+          <figcaption>The scoreboard during a run.</figcaption>
+        </figure>
+        <figure>
+          <img src="../assets/img/operacao.jpg" alt="Organizer view of a running competition" loading="lazy">
+          <figcaption>The organizer's view of a run.</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <section class="evidence" id="editions">
+      <p class="section-number">03 / Editions</p>
+      <div class="evidence-line">
+        <div>
+          <strong>RESEG 2025</strong>
+          <p>August 14, 2025, on the predecessor version of the platform. 25 accounts made 1,389 submissions.</p>
+        </div>
+        <div>
+          <strong>RESEG 2026</strong>
+          <p>August 26, 2026. 13 teams and 76 registrants over four hours. All 125 challenges were solved at least once, and the teams ran 54,698 SIEM queries.</p>
+        </div>
+        <div>
+          <strong>Ciber Week Brisanet 2026</strong>
+          <p>October 15, 2026. 36 teams over five and a half hours on 165 challenges, 65 of them solved, with 20,505 SIEM queries.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="demo" id="training">
+      <p class="section-number">04 / Training</p>
+      <h2>Learn the method<br>on a fictional company.</h2>
+      <p>The short course <em>Threat Hunting na Prática</em> (in Portuguese) teaches the investigation in four cases on the fictional Aurora scenario: notebooks that run in the browser, guided solutions, the course chapter and slides, and the challenge packages for the platform.</p>
+      <video controls preload="none" aria-label="Hikari after a run: commented solutions, questionnaire, certificate and data export">
+        <source src="../assets/demos/hikari-demo-pesquisa.webm" type="video/webm">
+        <track kind="captions" src="../assets/demos/captions/pesquisa.vtt" srclang="pt-BR" label="Português" default>
+      </video>
+      <p class="demo-help">After the run: commented solutions, the questionnaire, a verifiable certificate and the export of the recorded activity. Recorded on an isolated install.</p>
+      <p class="hero-links">
+        <a class="text-link" href="../minicurso/">Open the course material <span aria-hidden="true">→</span></a>
+      </p>
+    </section>
+
+    <section class="release" id="publications">
+      <p class="section-number">05 / Publications and data</p>
+      <h2>Published, preserved,<br>available on request.</h2>
+      <p>Edition data hold participant activity and stay private. Researchers interested in the data, the platform or a new edition can write to the author.</p>
+      <dl>
+        <div><dt>Paper</dt><dd>Barbieri, Belo, Chahud, Meneses, Marcondes and Pereira Júnior. <a href="https://doi.org/10.5753/sbseg.2025.11500">HIKARI – Desafios Reais, Ameaças Ocultas: Uma Plataforma de Threat Hunting Gamificada</a>. SBSeg 2025, in Portuguese.</dd></div>
+        <div><dt>Data</dt><dd>Preserved with checksums: RESEG 2025 platform logs, the RESEG 2026 database and corpus, and the versioned Ciber Week Brisanet 2026 package</dd></div>
+        <div><dt>Course</dt><dd><a href="../minicurso/">Threat Hunting na Prática</a>, material in Portuguese</dd></div>
+        <div><dt>Contact</dt><dd><a href="https://sidneibarbieri.github.io/#contact">Sidnei Barbieri</a></dd></div>
+      </dl>
+    </section>
+  </main>
+
+  <footer>
+    <span>Hikari research platform</span>
+    <span>A solved challenge is evidence found.</span>
+    <a href="https://sidneibarbieri.github.io/">Sidnei Barbieri</a>
+  </footer>
+</body>
+</html>
