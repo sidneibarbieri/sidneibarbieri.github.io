@@ -1,0 +1,100 @@
+WEBVTT
+
+00:00:00.000 --> 00:00:05.711
+Caso dois. A hipótese procura consultas regulares a um domínio usado por
+
+00:00:05.711 --> 00:00:11.897
+poucas estações. Uma contagem alta, por si só, não distingue um canal suspeito
+
+00:00:11.897 --> 00:00:16.656
+de uma atualização legítima. Vamos combinar frequência, raridade e tempo.
+
+00:00:17.856 --> 00:00:22.875
+Nos eventos de resolução de nomes, conte consultas e estações distintas por
+
+00:00:22.875 --> 00:00:27.894
+domínio. A atualização aparece oito mil seiscentas e quarenta vezes, em cento
+
+00:00:27.894 --> 00:00:33.330
+e vinte estações. Telemetria aurora cê dê ene ponto net aparece setecentas e
+
+00:00:33.330 --> 00:00:38.349
+dezenove vezes, mas em uma só estação. Nela, os intervalos entre consultas
+
+00:00:38.349 --> 00:00:43.368
+ficam de duzentos e oitenta e cinco a trezentos e quinze segundos.
+
+00:00:44.568 --> 00:00:48.762
+Na estação WKS engenharia cento e dezessete, compare as execuções do
+
+00:00:48.762 --> 00:00:54.482
+atualizador. Uma está no perfil do usuário e tem o Word como processo pai. As
+
+00:00:54.482 --> 00:01:00.201
+demais estão na pasta de programas e usam outro hash. O registro do Word traz
+
+00:01:00.201 --> 00:01:05.539
+um documento com macros, mas não mostra se a macro foi executada. Estação e
+
+00:01:05.539 --> 00:01:08.208
+horário não atribuem cada consulta ao processo.
+
+00:01:09.408 --> 00:01:14.248
+Para examinar o volume de saída, exclua destinos internos e some source ponto
+
+00:01:14.248 --> 00:01:18.716
+bytes por destino. O maior fluxo isolado era backup interno. Somar bytes
+
+00:01:18.716 --> 00:01:23.184
+recebidos apontaria o espelho de atualização. Já o endereço externo cento e
+
+00:01:23.184 --> 00:01:28.769
+noventa e oito ponto cinquenta e um ponto cem ponto sessenta e um recebeu dois
+
+00:01:28.769 --> 00:01:33.609
+bilhões duzentos e noventa e dois milhões novecentos e trinta e três mil
+
+00:01:33.609 --> 00:01:36.960
+setecentos e setenta bytes em cento e oitenta fluxos.
+
+00:01:38.160 --> 00:01:43.978
+Retome o primeiro pivô. Um domínio corporativo muito consultado por todas as
+
+00:01:43.978 --> 00:01:49.310
+estações pode ser rotina. O domínio raro aparece repetidamente numa estação,
+
+00:01:49.310 --> 00:01:54.643
+inclusive de madrugada. Ordenar seus eventos por horário mostra os intervalos
+
+00:01:54.643 --> 00:01:59.976
+regulares. A próxima pergunta é quais processos aparecem nessa mesma estação.
+
+00:02:01.176 --> 00:02:06.045
+O monitoramento de processos encontra um executável com nome conhecido fora da
+
+00:02:06.045 --> 00:02:11.320
+pasta esperada e com processo pai incomum. O firewall mostra o volume enviado
+
+00:02:11.320 --> 00:02:15.784
+a um destino externo. Juntos, os registros justificam a investigação dessa
+
+00:02:15.784 --> 00:02:21.059
+estação. Eles não revelam o conteúdo enviado nem provam que o executável gerou
+
+00:02:21.059 --> 00:02:23.088
+todas as consultas ao domínio.
+
+00:02:24.288 --> 00:02:29.815
+Duas detecções candidatas saem deste caso. Uma combina muitas consultas a um
+
+00:02:29.815 --> 00:02:34.422
+domínio por poucas estações com intervalos pouco variáveis. Outra procura
+
+00:02:34.422 --> 00:02:39.488
+nomes de executáveis conhecidos fora do caminho de instalação esperado. Os
+
+00:02:39.488 --> 00:02:45.016
+limiares vêm de um cenário sintético. Antes de ativar qualquer uma, meça
+
+00:02:45.016 --> 00:02:48.240
+quantas rotinas legítimas também satisfazem essas condições.
