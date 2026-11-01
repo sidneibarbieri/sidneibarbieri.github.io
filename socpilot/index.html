@@ -101,17 +101,17 @@
     <section class="demo" id="demo" aria-labelledby="demo-title">
       <p class="section-number">04 / Synthetic demonstration</p>
       <h2 id="demo-title">Inspect a proposal, its violations and its repair.</h2>
-      <p>The library example checks an ordered action list against two declared
-      rules. The recording shows actual CLI output with empty telemetry and no
-      model calls or executed response actions.</p>
-      <video controls preload="none" poster="assets/demos/posters/socpilot-synthetic-cli.jpg"
-             aria-label="SOCpilot synthetic CLI output inspection">
-        <source src="assets/demos/socpilot-synthetic-cli.webm" type="video/webm">
-        <track kind="captions" src="assets/demos/captions/socpilot-synthetic-cli.vtt"
+      <p>The illustrated walkthrough uses the library's synthetic policy example.
+      The proposal violates two declared rules; the verifier reports typed edits
+      and checks the repaired plan. No model calls or response actions occur.</p>
+      <video controls preload="none" poster="assets/demos/posters/socpilot-policy-walkthrough.jpg"
+             aria-label="SOCpilot synthetic policy check walkthrough">
+        <source src="assets/demos/socpilot-policy-walkthrough.mp4" type="video/mp4">
+        <track kind="captions" src="assets/demos/captions/socpilot-policy-walkthrough.vtt"
                srclang="en" label="English" default>
         Your browser does not support embedded video. Read the transcript below.
       </video>
-      <p class="demo-help">Use fullscreen to inspect JSON fields, or read the transcript.</p>
+      <p class="demo-help">Use fullscreen to inspect the rules and edits, or read the transcript.</p>
       <details class="demo-transcript">
         <summary>Read the transcript</summary>
         <p>The example declares a proposal to reimage a host and then isolate it.
@@ -121,10 +121,10 @@
         reimaging. The repaired list is <code>collect_forensics</code>, followed by
         <code>reimage_host</code>. Both example rules pass, and a second enforcement
         pass leaves the list unchanged.</p>
-        <p>This is a synthetic demonstration of plan verification. It does not
-        measure model behavior, analyst benefit or incident containment. The
-        browser displays the original CLI report with text selection for
-        readability; the recording is not an interactive response console.</p>
+        <p>This is an illustration of the source-defined synthetic example. It does
+        not measure model behavior, analyst benefit or incident containment. The
+        original report is available from <code>soc_llm_policy.policy_example</code>
+        in the artifact. This recording is not an interactive response console.</p>
       </details>
     </section>
 
