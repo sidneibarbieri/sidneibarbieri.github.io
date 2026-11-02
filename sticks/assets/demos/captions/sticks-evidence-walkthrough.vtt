@@ -3,14 +3,14 @@ WEBVTT
 00:00.000 --> 00:07.447
 A public campaign names techniques. It does not supply a runnable sequence or its environment bindings.
 
-00:07.447 --> 00:17.036
-The versioned catalog supports 252 of 1146 corpus steps. Unsupported steps remain visible.
+00:07.447 --> 00:17.512
+The versioned catalog supports 252 of 1146 corpus steps. Steps outside the catalog remain visible.
 
-00:17.036 --> 00:27.257
+00:17.512 --> 00:27.733
 A proposer can suggest a procedure. The verifier checks its bindings, preconditions, execution scope, and evidence obligations.
 
-00:27.257 --> 00:37.676
-In three fully supported campaigns, raw STIX admits 0 of 25 steps. Reconstructed contracts admit 25 of 25.
+00:27.733 --> 00:38.907
+In three fully supported campaigns, unaugmented intelligence admits 0 of 25 steps. Reconstructed contracts admit 25 of 25.
 
-00:37.676 --> 00:45.257
+00:38.907 --> 00:46.487
 The output records each binding and its provenance. Runtime effect requires a separate observed execution.

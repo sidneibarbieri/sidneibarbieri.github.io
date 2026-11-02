@@ -9,3 +9,11 @@ This video demonstrates bounded planning and export, not operational execution.
 The delivery uses a 1280x832 canvas with a 112-pixel upper caption band.
 The original 1280x720 interface pixels are preserved losslessly without scaling.
 English captions remain a separate, optional WebVTT track.
+
+## Evidence walkthrough
+
+`sticks-evidence-walkthrough.mp4` is an original narrated explanation of the
+research results, not a recording of campaign execution. Frames are rendered
+from the paper-bound values by `tools/research-sites/render_evidence_walkthroughs.py`.
+Speech was synthesized locally with the macOS Daniel voice; no music or external
+audio recording is mixed into it. Captions are provided as a separate VTT track.
