@@ -1,16 +1,16 @@
 WEBVTT
 
-00:00.000 --> 00:05.591
-Here is a synthetic response plan. No model or endpoint is involved.
+00:00.000 --> 00:04.000
+Run the packaged synthetic policy example; no model or endpoint is involved.
 
-00:05.591 --> 00:12.777
+00:04.000 --> 00:08.000
 The policy requires forensic collection before reimaging, and prohibits isolation in this example.
 
-00:12.777 --> 00:18.163
+00:08.000 --> 00:12.000
 The deterministic check reports an ordering violation and a prohibited action.
 
-00:18.163 --> 00:24.013
+00:12.000 --> 00:16.000
 The verifier removes isolation and inserts forensic collection before reimaging.
 
-00:24.013 --> 00:30.946
+00:16.000 --> 00:20.000
 The repaired plan passes both declared rules. A second enforcement pass makes no changes.

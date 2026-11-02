@@ -101,7 +101,8 @@
     <section class="demo" id="demo" aria-labelledby="demo-title">
       <p class="section-number">04 / Synthetic demonstration</p>
       <h2 id="demo-title">Inspect a proposal, its violations and its repair.</h2>
-      <p>The illustrated walkthrough uses the library's synthetic policy example.
+      <p>This silent, 20-second walkthrough is rendered from the output of the library's
+      executable synthetic policy example (<code>python -m soc_llm_policy.policy_example</code>).
       The proposal violates two declared rules; the verifier reports typed edits
       and checks the repaired plan. No model calls or response actions occur.</p>
       <video controls preload="none" poster="assets/demos/posters/socpilot-policy-walkthrough.jpg"
@@ -111,7 +112,7 @@
                srclang="en" label="English" default>
         Your browser does not support embedded video. Read the transcript below.
       </video>
-      <p class="demo-help">Use fullscreen to inspect the rules and edits, or read the transcript. This is a synthetic example, not a live SOC console.</p>
+      <p class="demo-help">Use fullscreen to inspect the rules and edits, or read the transcript. Run the command in the reviewer package to obtain the full JSON report. This is a synthetic example, not a live SOC console.</p>
       <p class="demo-help">To inspect released evidence, download the <a href="https://anonymous.4open.science/r/socpilot/README.md">reviewer package</a>, open <code>REVIEWER_DASHBOARD.html</code>, and run <code>bash reproduce.sh reproduce-results</code> from its root. This offline replay makes no model calls.</p>
       <details class="demo-transcript">
         <summary>Read the transcript</summary>
