@@ -9,6 +9,9 @@ This video demonstrates bounded planning and export, not operational execution.
 The delivery uses a 1280x832 canvas with a 112-pixel upper caption band.
 The original 1280x720 interface pixels are preserved losslessly without scaling.
 English captions remain a separate, optional WebVTT track.
+`sticks-planning-30s.mp4` is the same recording played at twice its original
+speed, with the six caption intervals retimed. It shows the workbench and JSON
+export; it does not show a CALDERA or SUT execution.
 
 ## Evidence walkthrough
 

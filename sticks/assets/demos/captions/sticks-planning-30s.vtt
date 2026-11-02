@@ -1,0 +1,20 @@
+WEBVTT
+
+00:00:00.000 --> 00:00:04.000 line:0%
+Select a pinned campaign and set search limits.
+
+00:00:04.000 --> 00:00:10.000 line:0%
+Enumerate candidates within the declared bound.
+Planning does not execute a campaign.
+
+00:00:10.000 --> 00:00:15.000 line:0%
+Inspect source steps and their requirements.
+
+00:00:15.000 --> 00:00:20.000 line:0%
+Compare candidate realizations.
+
+00:00:20.000 --> 00:00:25.000 line:0%
+Export the planning record as JSON.
+
+00:00:25.000 --> 00:00:30.300 line:0%
+Review the limits: operational status is not_run.
