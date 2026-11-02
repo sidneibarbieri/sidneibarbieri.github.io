@@ -1,0 +1,16 @@
+WEBVTT
+
+00:00.000 --> 00:04.000
+Run the released C0010 blueprint synthesis command.
+
+00:04.000 --> 00:08.000
+Four requirements come from STIX fields and curated rules.
+
+00:08.000 --> 00:12.000
+The generated blueprint specifies one Linux target host.
+
+00:12.000 --> 00:16.000
+The blueprint requests a private lab without host or Internet access.
+
+00:16.000 --> 00:20.000
+The output binds to its source constraints; no host was booted.

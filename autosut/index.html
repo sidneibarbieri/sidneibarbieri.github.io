@@ -100,24 +100,22 @@
     </section>
 
     <section class="demo" id="demo">
-      <p class="section-number">04 / Evidence walkthrough</p>
-      <h2>See how one choice changes a run.</h2>
-      <p>A narrated, 32-second explanation of the environment contract and its controlled consequence study.</p>
-      <video controls preload="none" aria-label="AutoSUT evidence walkthrough"
-        poster="assets/demos/posters/autosut-evidence-walkthrough.jpg">
-        <source src="assets/demos/autosut-evidence-walkthrough.mp4" type="video/mp4">
-        <track kind="captions" src="assets/demos/captions/autosut-evidence-walkthrough.vtt"
+      <p class="section-number">04 / Blueprint synthesis</p>
+      <h2>Generate a SUT blueprint from declared requirements.</h2>
+      <p>This silent, 20-second trace is rendered from the released C0010 synthesis command. It shows the input constraints, generated host and network policy, and the source binding. Blueprint generation does not boot a host or execute a campaign.</p>
+      <video controls preload="none" aria-label="AutoSUT C0010 blueprint synthesis trace"
+        poster="assets/demos/posters/autosut-blueprint-20s.jpg">
+        <source src="assets/demos/autosut-blueprint-20s.mp4" type="video/mp4">
+        <track kind="captions" src="assets/demos/captions/autosut-blueprint-20s.vtt"
           srclang="en" label="English" default>
         Your browser cannot play this video. Read the transcript below.
       </video>
-      <p class="demo-help">To inspect preserved claims, <a href="assets/demos/autosut-reviewer.webm">watch the silent reviewer dashboard recording</a>. The dashboard does not rerun the lab.</p>
+      <p class="demo-help">For the measured consequence study, <a href="assets/demos/autosut-evidence-walkthrough.mp4">watch the evidence walkthrough</a>. To inspect preserved claims, <a href="assets/demos/autosut-reviewer.webm">watch the reviewer dashboard recording</a>. Neither clip reruns the lab.</p>
       <p class="demo-help">To use the released artifact, follow its <a href="https://github.com/sidneibarbieri/autosut/tree/3d0da5a2467bea4594b753ac794f1f2d83607a29">reviewer instructions</a> and run <code>bash run_review_check.sh</code> from the extracted root. The live SUT workflow is separate.</p>
       <details class="demo-transcript">
         <summary>Read the transcript</summary>
-        <p>Structured intelligence can name platforms, software, and vulnerabilities, while deployment choices remain open.</p>
-        <p>AutoSUT separates source evidence, deterministic routing, and committed environment choices.</p>
-        <p>Two surrogate SUTs satisfy the same measured constraints. The same procedure executes 10 and 1 of ten steps.</p>
-        <p>The reviewer package links each claim to the source, routing rule, chosen profile, and preserved outcome.</p>
+        <p>The released C0010 constraints file declares four requirements from STIX fields and curated rules. The synthesis command writes one Linux target host with a Docker recipe and a private lab network policy.</p>
+        <p>The generated blueprint retains the hash of its source constraints. This command produces a blueprint; it does not provision the host or execute the campaign. The separate consequence study compares two surrogate SUTs under the same constraints.</p>
       </details>
     </section>
 
