@@ -1,0 +1,49 @@
+WEBVTT
+
+00:00:00.000 --> 00:00:05.920
+Start in the installed SOCpilot environment, run the policy example and save its output.
+
+00:00:06.820 --> 00:00:10.080
+This synthetic incident proposes two actions.
+
+00:00:10.200 --> 00:00:14.480
+The first rebuilds the host, the second isolates it.
+
+00:00:15.040 --> 00:00:17.480
+The example declares two rules.
+
+00:00:18.260 --> 00:00:22.420
+An investigator must collect evidence before rebuilding the host.
+
+00:00:22.540 --> 00:00:26.440
+For this incident, the policy also prohibits isolation.
+
+00:00:26.560 --> 00:00:29.440
+The checker reports both violations.
+
+00:00:31.120 --> 00:00:34.740
+The plan schedules the rebuild before collecting evidence.
+
+00:00:35.520 --> 00:00:39.240
+The proposed isolation also violates the second rule.
+
+00:00:40.480 --> 00:00:43.000
+Follow the edits back to the proposal.
+
+00:00:43.600 --> 00:00:48.900
+The repair removes isolation and inserts forensic collection before rebuilding.
+
+00:00:49.020 --> 00:00:52.880
+The resulting sequence is visible in the same output file.
+
+00:00:53.200 --> 00:00:56.520
+Finally, inspect the verdict on the repaired plan.
+
+00:00:58.400 --> 00:01:00.760
+The violations list is empty.
+
+00:01:00.880 --> 00:01:04.100
+A second repair leaves the sequence unchanged.
+
+00:01:04.220 --> 00:01:09.420
+This checks a plan against the declared policy before anyone acts on the host.

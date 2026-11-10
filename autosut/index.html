@@ -100,20 +100,29 @@
     </section>
 
     <section class="demo" id="demo">
-      <p class="section-number">04 / Blueprint synthesis</p>
-      <h2>Generate a SUT blueprint from declared requirements.</h2>
-      <p>This silent, 20-second trace is rendered from the released C0010 synthesis command. It shows the input constraints, generated host and network policy, and the source binding. Blueprint generation does not boot a host or execute a campaign.</p>
-      <video controls preload="none" aria-label="AutoSUT C0010 blueprint synthesis trace"
-        poster="assets/demos/posters/autosut-blueprint-20s.jpg">
-        <source src="assets/demos/autosut-blueprint-20s.mp4" type="video/mp4">
-        <track kind="captions" src="assets/demos/captions/autosut-blueprint-20s.vtt"
-          srclang="en" label="English" default>
-        Your browser cannot play this video. Read the transcript below.
+      <p class="section-number">04 / Docker replay</p>
+      <h2>Run and validate two Docker replays.</h2>
+      <p>Follow the reviewer command through an infrastructure test and a ShadowRay surrogate. The validator checks the evidence from both runs against the artifact. English narration uses a synthetic voice.</p>
+      <video controls preload="none" playsinline poster="assets/demos/posters/operational-demo.jpg" aria-label="AutoSUT Docker replay and validation">
+        <source src="assets/demos/operational-demo.mp4" type="video/mp4">
+        <track kind="captions" src="assets/demos/captions/operational-demo.vtt" srclang="en" label="English" default>
       </video>
-      <p class="demo-help">For the measured consequence study, <a href="assets/demos/autosut-evidence-walkthrough.mp4">watch the evidence walkthrough</a>. To inspect preserved claims, <a href="assets/demos/autosut-reviewer.webm">watch the reviewer dashboard recording</a>. Neither clip reruns the lab.</p>
-      <p class="demo-help">To use the released artifact, follow its <a href="https://github.com/sidneibarbieri/autosut/tree/3d0da5a2467bea4594b753ac794f1f2d83607a29">reviewer instructions</a> and run <code>bash run_review_check.sh</code> from the extracted root. The live SUT workflow is separate.</p>
       <details class="demo-transcript">
-        <summary>Read the transcript</summary>
+        <summary>Read the narrated demo transcript</summary>
+        <p>From the artifact directory, run the replay and validator shown here.</p>
+        <p>This recording skips the waits between results.</p>
+        <p>The first run checks the Docker lab.</p>
+        <p>The evidence-backed row shows six out of six adapted actions.</p>
+        <p>The ShadowRay surrogate shows evidence for ten out of ten actions.</p>
+        <p>Look for controlled state contract OK.</p>
+        <p>The manifest check confirms that the released files match their recorded sizes and hashes.</p>
+      </details>
+      <p class="demo-help">With Docker running, enter the installed AutoSUT artifact directory. Run <code>bash artifact/run.sh</code> and then <code>bash artifact/validate.sh</code>.</p>
+      <p class="demo-help"><a href="assets/demos/autosut-blueprint-20s.mp4">Watch the blueprint synthesis trace</a>.</p>
+      <p class="demo-help">For the measured consequence study, <a href="assets/demos/autosut-evidence-walkthrough.mp4">watch the evidence walkthrough</a>. To inspect preserved claims, <a href="assets/demos/autosut-reviewer.webm">watch the reviewer dashboard recording</a>. Neither clip reruns the lab.</p>
+      <p class="demo-help">To use the released artifact, follow its <a href="https://anonymous.4open.science/r/autosut-artifact-2026-379C/README.md">reviewer instructions</a> and run <code>bash run_review_check.sh</code> from the extracted root. The live SUT workflow is separate.</p>
+      <details class="demo-transcript">
+        <summary>Read the blueprint synthesis transcript</summary>
         <p>The released C0010 constraints file declares four requirements from STIX fields and curated rules. The synthesis command writes one Linux target host with a Docker recipe and a private lab network policy.</p>
         <p>The generated blueprint retains the hash of its source constraints. This command produces a blueprint; it does not provision the host or execute the campaign. The separate consequence study compares two surrogate SUTs under the same constraints.</p>
       </details>

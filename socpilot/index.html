@@ -101,17 +101,20 @@
     <section class="demo" id="demo" aria-labelledby="demo-title">
       <p class="section-number">04 / Synthetic demonstration</p>
       <h2 id="demo-title">Inspect a proposal, its violations and its repair.</h2>
-      <p>This silent, 20-second walkthrough is rendered from the output of the library's
-      executable synthetic policy example (<code>python -m soc_llm_policy.policy_example</code>).
-      The proposal violates two declared rules; the verifier reports typed edits
-      and checks the repaired plan. No model calls or response actions occur.</p>
-      <video controls preload="none" poster="assets/demos/posters/socpilot-policy-walkthrough.jpg"
-             aria-label="SOCpilot synthetic policy check walkthrough">
-        <source src="assets/demos/socpilot-policy-walkthrough.mp4" type="video/mp4">
-        <track kind="captions" src="assets/demos/captions/socpilot-policy-walkthrough.vtt"
-               srclang="en" label="English" default>
-        Your browser does not support embedded video. Read the transcript below.
+      <p>Run the synthetic policy example and inspect the two violations, typed edits, and repaired verdict in the JSON output. English narration uses a synthetic voice.</p>
+      <video controls preload="none" playsinline poster="assets/demos/posters/operational-demo.jpg" aria-label="SOCpilot synthetic policy check">
+        <source src="assets/demos/operational-demo.mp4" type="video/mp4">
+        <track kind="captions" src="assets/demos/captions/operational-demo.vtt" srclang="en" label="English" default>
       </video>
+      <details class="demo-transcript">
+        <summary>Read the narrated demo transcript</summary>
+        <p>Start in the installed SOCpilot environment, run the policy example and save its output. This synthetic incident proposes two actions. The first rebuilds the host, the second isolates it.</p>
+        <p>The example declares two rules. An investigator must collect evidence before rebuilding the host. For this incident, the policy also prohibits isolation.</p>
+        <p>The checker reports both violations. The plan schedules the rebuild before collecting evidence. The proposed isolation also violates the second rule.</p>
+        <p>Follow the edits back to the proposal. The repair removes isolation and inserts forensic collection before rebuilding. The resulting sequence is visible in the same output file.</p>
+        <p>Finally, inspect the verdict on the repaired plan. The violations list is empty. A second repair leaves the sequence unchanged. This checks a plan against the declared policy before anyone acts on the host.</p>
+      </details>
+      <p class="demo-help"><a href="assets/demos/socpilot-policy-walkthrough.mp4">Watch the short policy walkthrough</a>.</p>
       <p class="demo-help">Use fullscreen to inspect the rules and edits, or read the transcript. Run the command in the reviewer package to obtain the full JSON report. This is a synthetic example, not a live SOC console.</p>
       <p class="demo-help">To inspect released evidence, download the <a href="https://anonymous.4open.science/r/socpilot/README.md">reviewer package</a>, open <code>REVIEWER_DASHBOARD.html</code>, and run <code>bash reproduce.sh reproduce-results</code> from its root. This offline replay makes no model calls.</p>
       <details class="demo-transcript">

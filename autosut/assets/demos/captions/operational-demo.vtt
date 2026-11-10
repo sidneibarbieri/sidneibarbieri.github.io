@@ -1,0 +1,22 @@
+WEBVTT
+
+00:00:00.800 --> 00:00:05.360
+From the artifact directory, run the replay and validator shown here.
+
+00:00:05.480 --> 00:00:08.680
+This recording skips the waits between results.
+
+00:00:13.100 --> 00:00:15.540
+The first run checks the Docker lab.
+
+00:00:15.680 --> 00:00:19.920
+The evidence-backed row shows six out of six adapted actions.
+
+00:00:25.300 --> 00:00:29.480
+The ShadowRay surrogate shows evidence for ten out of ten actions.
+
+00:00:31.000 --> 00:00:34.000
+Look for controlled state contract OK.
+
+00:00:34.120 --> 00:00:39.660
+The manifest check confirms that the released files match their recorded sizes and hashes.
