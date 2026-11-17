@@ -1,22 +1,73 @@
 WEBVTT
 
-00:00:00.800 --> 00:00:05.360
-From the artifact directory, run the replay and validator shown here.
+00:00:01.944 --> 00:00:05.544
+AutoSUT derives the environment that a campaign needs.
 
-00:00:05.480 --> 00:00:08.680
-This recording skips the waits between results.
+00:00:05.807 --> 00:00:12.032
+Its local planning interface loads the pinned procedural plan for campaign C0045,
 
-00:00:13.100 --> 00:00:15.540
+00:00:12.107 --> 00:00:12.882
+ShadowRay.
+
+00:00:16.872 --> 00:00:22.360
+Resolve environment requirements verifies the content hash and derives eleven requirements.
+
+00:00:22.622 --> 00:00:26.447
+Linux is the selected platform, and platform coverage is complete.
+
+00:00:26.722 --> 00:00:31.835
+The banner states that service readiness and target effects still require a laboratory run.
+
+00:00:34.294 --> 00:00:37.419
+The environment map groups the steps by where they run:
+
+00:00:37.707 --> 00:00:42.757
+one on the attacker side, two at the exposed boundary, and seven on the target system.
+
+00:00:43.019 --> 00:00:44.882
+Each zone lists what it must provide.
+
+00:00:47.140 --> 00:00:50.015
+Requirements labelled rule come from declared rules,
+
+00:00:50.128 --> 00:00:52.728
+such as a reachable public-facing application.
+
+00:00:53.003 --> 00:00:55.265
+The others come directly from STIX fields.
+
+00:00:55.540 --> 00:00:58.228
+The table keeps each source and rationale.
+
+00:01:02.719 --> 00:01:07.044
+Download planning JSON saves the verified input and the requirements.
+
+00:01:07.307 --> 00:01:10.919
+The operational status is not run: nothing was provisioned.
+
+00:01:12.390 --> 00:01:14.553
+Running a campaign is a separate step.
+
+00:01:14.815 --> 00:01:18.665
+Next, an edited capture of an earlier controlled Docker replay.
+
+00:01:20.725 --> 00:01:24.862
+From the artifact directory, run the replay and the validator shown here.
+
+00:01:25.540 --> 00:01:28.553
+This recording skips the idle time between results.
+
+00:01:33.192 --> 00:01:35.130
 The first run checks the Docker lab.
 
-00:00:15.680 --> 00:00:19.920
+00:01:35.820 --> 00:01:39.407
 The evidence-backed row shows six out of six adapted actions.
 
-00:00:25.300 --> 00:00:29.480
+00:01:45.472 --> 00:01:49.172
 The ShadowRay surrogate shows evidence for ten out of ten actions.
 
-00:00:31.000 --> 00:00:34.000
+00:01:51.168 --> 00:01:53.368
 Look for controlled state contract OK.
 
-00:00:34.120 --> 00:00:39.660
+00:01:54.312 --> 00:01:59.463
 The manifest check confirms that the released files match their recorded sizes and hashes.

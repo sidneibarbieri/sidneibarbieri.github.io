@@ -1,34 +1,88 @@
 WEBVTT
 
-00:00:00.000 --> 00:00:04.360
-This is an edited capture of a fresh C0026 run.
+00:00:01.656 --> 00:00:06.231
+STICKS turns a threat-intelligence campaign into a plan that can be executed.
 
-00:00:04.980 --> 00:00:08.020
+00:00:06.506 --> 00:00:09.269
+This is the local workbench from the public repository.
+
+00:00:09.531 --> 00:00:15.806
+Campaign C0045, ShadowRay, is selected, with explicit search bounds.
+
+00:00:19.848 --> 00:00:22.823
+Enumerate realizations computes the plans offline.
+
+00:00:23.098 --> 00:00:28.535
+Sixty-four complete realizations share one procedure assignment and one causal structure.
+
+00:00:28.810 --> 00:00:33.110
+The search stopped at its ceiling of sixty-four, so other orders may remain.
+
+00:00:37.175 --> 00:00:39.900
+The causal graph draws one realization,
+
+00:00:40.062 --> 00:00:43.050
+from the initial state through each step to the goal.
+
+00:00:43.312 --> 00:00:47.612
+Each edge is a fact that one step produces and a later step consumes.
+
+00:00:50.554 --> 00:00:53.054
+Select step two, T1190.
+
+00:00:53.317 --> 00:00:56.029
+It consumes two facts from the initial state:
+
+00:00:56.329 --> 00:01:00.392
+a reachable Ray dashboard and an available HTTP service.
+
+00:01:00.654 --> 00:01:05.029
+It enables shell access on the target, which steps three to ten consume.
+
+00:01:07.781 --> 00:01:10.868
+Changing the execution order keeps the same graph.
+
+00:01:11.131 --> 00:01:16.793
+Only the numbers on the steps change: order six runs step ten before steps nine and eight.
+
+00:01:21.329 --> 00:01:26.379
+Download JSON saves the inputs and the result, and the command shown recomputes it.
+
+00:01:26.654 --> 00:01:30.491
+The operational status is not run: planning executes nothing.
+
+00:01:31.961 --> 00:01:34.761
+Execution is a separate laboratory workflow.
+
+00:01:36.005 --> 00:01:40.630
+Here is an edited capture of an earlier fresh C0026 run.
+
+00:01:41.312 --> 00:01:44.075
 The artifact starts three virtual machines.
 
-00:00:08.140 --> 00:00:13.940
+00:01:44.752 --> 00:01:49.602
 One hosts Caldera, one represents the attacker, and one is the Linux target.
 
-00:00:14.840 --> 00:00:18.720
+00:01:51.460 --> 00:01:54.985
 After enrollment, Caldera dispatches the target actions.
 
-00:00:18.840 --> 00:00:23.880
+00:01:55.672 --> 00:02:00.185
 The runtime records five observed occurrences and one simulated occurrence.
 
-00:00:24.640 --> 00:00:27.220
+00:02:01.460 --> 00:02:03.547
 No occurrence failed or was blocked.
 
-00:00:27.340 --> 00:00:31.040
+00:02:04.220 --> 00:02:07.370
 An independent probe checks the target after execution.
 
-00:00:33.080 --> 00:00:39.920
+00:02:09.993 --> 00:02:16.155
 It verifies that the collected material matches the declared sources and that the chunks reconstruct the archive.
 
-00:00:41.660 --> 00:00:46.140
+00:02:18.642 --> 00:02:22.892
 Finally, the runner destroys the virtual machines and seals the receipt.
 
-00:00:47.140 --> 00:00:50.340
+00:02:24.072 --> 00:02:26.747
 The artifact validator returned exit zero.
 
-00:00:50.580 --> 00:00:53.380
+00:02:27.500 --> 00:02:29.950
 Check that all three virtual machines are gone.

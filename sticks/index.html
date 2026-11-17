@@ -100,21 +100,27 @@
 
     <section class="demo" id="demo">
       <p class="section-number">04 / Campaign demonstration</p>
-      <h2>Watch a controlled campaign run.</h2>
-      <p>Follow a fresh C0026 run through QEMU lab setup, CALDERA dispatch, independent target observation, and receipt validation. The edited recording shows five observed occurrences and one simulated occurrence. English narration uses a synthetic voice.</p>
-      <video controls preload="none" playsinline poster="assets/demos/posters/operational-demo.jpg" aria-label="STICKS C0026 laboratory run">
+      <h2>Plan a campaign, then watch one run.</h2>
+      <p>First, the workbench enumerates C0045 and draws one realization as a causal graph; planning ends with operational status not_run. Then an edited capture of an earlier fresh C0026 run follows QEMU lab setup, CALDERA dispatch, independent target observation, and receipt validation, with five observed occurrences and one simulated occurrence. English narration uses a synthetic voice.</p>
+      <video controls preload="none" playsinline poster="assets/demos/posters/operational-demo.jpg" aria-label="STICKS causal graph of C0045 and C0026 laboratory run">
         <source src="assets/demos/operational-demo.mp4" type="video/mp4">
         <track kind="captions" src="assets/demos/captions/operational-demo.vtt" srclang="en" label="English" default>
       </video>
       <details class="demo-transcript">
         <summary>Read the narrated demo transcript</summary>
-        <p>This is an edited capture of a fresh C0026 run. The artifact starts three virtual machines. One hosts Caldera, one represents the attacker, and one is the Linux target.</p>
+        <p>STICKS turns a threat-intelligence campaign into a plan that can be executed. This is the local workbench from the public repository. Campaign C0045, ShadowRay, is selected, with explicit search bounds.</p>
+        <p>Enumerate realizations computes the plans offline. Sixty-four complete realizations share one procedure assignment and one causal structure. The search stopped at its ceiling of sixty-four, so other orders may remain.</p>
+        <p>The causal graph draws one realization, from the initial state through each step to the goal. Each edge is a fact that one step produces and a later step consumes.</p>
+        <p>Select step two, T1190. It consumes two facts from the initial state: a reachable Ray dashboard and an available HTTP service. It enables shell access on the target, which steps three to ten consume.</p>
+        <p>Changing the execution order keeps the same graph. Only the numbers on the steps change: order six runs step ten before steps nine and eight.</p>
+        <p>Download JSON saves the inputs and the result, and the command shown recomputes it. The operational status is not run: planning executes nothing.</p>
+        <p>Execution is a separate laboratory workflow.</p>
+        <p>Here is an edited capture of an earlier fresh C0026 run. The artifact starts three virtual machines. One hosts Caldera, one represents the attacker, and one is the Linux target.</p>
         <p>After enrollment, Caldera dispatches the target actions. The runtime records five observed occurrences and one simulated occurrence. No occurrence failed or was blocked.</p>
-        <p>An independent probe checks the target after execution. It verifies that the collected material matches the declared sources and that the chunks reconstruct the archive.</p>
-        <p>Finally, the runner destroys the virtual machines and seals the receipt. The artifact validator returned exit zero. Check that all three virtual machines are gone.</p>
+        <p>An independent probe checks the target after execution. It verifies that the collected material matches the declared sources and that the chunks reconstruct the archive. Finally, the runner destroys the virtual machines and seals the receipt.</p>
+        <p>The artifact validator returned exit zero. Check that all three virtual machines are gone.</p>
       </details>
       <p class="demo-help">After completing the QEMU prerequisites in the artifact README, choose a new run directory. Run <code>bash artifact/run.sh --run-root /path/to/new-run</code> and then <code>bash artifact/validate.sh --run-root /path/to/new-run</code>.</p>
-      <p class="demo-help"><a href="assets/demos/sticks-planning-30s.mp4">Watch the planning workbench recording</a>.</p>
       <p class="demo-help">For the study context and measured result, <a href="assets/demos/sticks-evidence-walkthrough.mp4">watch the narrated explanation</a>.</p>
       <p class="demo-help">To use the released artifact, open the <a href="https://anonymous.4open.science/r/sticks-BB6F/README.md">reviewer instructions</a>, download the snapshot, and run <code>bash run_review_check.sh</code> from its root. This reproduces frozen evidence offline; a new campaign requires the separate laboratory workflow.</p>
       <details class="demo-transcript">
